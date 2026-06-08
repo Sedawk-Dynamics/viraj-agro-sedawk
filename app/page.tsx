@@ -63,7 +63,7 @@ type Step = { n: number; title: string; desc: string; img?: string; ph?: string;
 
 const steps: Step[] = [
   { n: 1, title: "Sourcing", desc: "Carefully sourced from trusted moringa farms.", img: "/images/hero-farm.jpg" },
-  { n: 2, title: "Cleaning & Drying", desc: "Hygienic cleaning & low temperature drying.", ph: "Drying Trays", grad: "from-[#79b97f] to-[#256b31]" },
+  { n: 2, title: "Cleaning & Drying", desc: "Hygienic cleaning & low temperature drying.", img: "/images/Cleaning%20%26%20Drying.webp" },
   { n: 3, title: "Grinding", desc: "Fine grinding to retain maximum nutrition.", img: "/images/moringa-powder.jpg" },
   { n: 4, title: "Quality Check", desc: "Lab tested for purity, moisture & nutrients.", img: "/images/quality-lab.jpg" },
   { n: 5, title: "Packaging & Export", desc: "Export-grade packaging & global shipping.", img: "/images/global-shipping.jpg" },

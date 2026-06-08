@@ -6,8 +6,6 @@ import { Phone, Mail, Menu, X } from "./Icons";
 const links = [
   { label: "Home", href: "#top" },
   { label: "About Us", href: "#about" },
-  { label: "Our Moringa", href: "#products" },
-  { label: "Quality", href: "#quality" },
   { label: "Process", href: "#process" },
   { label: "For Bulk Buyers", href: "#bulk" },
   { label: "Contact", href: "#footer" },

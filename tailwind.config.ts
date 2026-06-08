@@ -5,11 +5,6 @@ const config: Config = {
     "./app/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
   ],
-  // The site ships its own CSS reset in globals.css (carried over from the
-  // original design), so Tailwind's Preflight is disabled to avoid a double reset.
-  corePlugins: {
-    preflight: false,
-  },
   theme: {
     extend: {
       colors: {
@@ -21,6 +16,14 @@ const config: Config = {
           "brown-light": "#A67C52",
           beige: "#F6F3EB",
           cream: "#FBF9F4",
+        },
+        // Moringa homepage palette
+        brand: {
+          deep: "#14532D",
+          band: "#1F4D2E",
+          accent: "#2E7D32",
+          light: "#3A7D44",
+          cream: "#F7F7F2",
         },
       },
       fontFamily: {

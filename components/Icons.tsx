@@ -71,6 +71,12 @@ export const ChevronDown = (p: IconProps) => (
   </Stroke>
 );
 
+export const ChevronRight = (p: IconProps) => (
+  <Stroke {...p}>
+    <path d="m9 18 6-6-6-6" />
+  </Stroke>
+);
+
 export const Menu = (p: IconProps) => (
   <Stroke {...p}>
     <line x1="4" x2="20" y1="12" y2="12" />
@@ -173,6 +179,19 @@ export const Users = (p: IconProps) => (
   </Stroke>
 );
 
+export const Droplet = (p: IconProps) => (
+  <Stroke {...p}>
+    <path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z" />
+  </Stroke>
+);
+
+export const User = (p: IconProps) => (
+  <Stroke {...p}>
+    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+    <circle cx="12" cy="7" r="4" />
+  </Stroke>
+);
+
 export const Target = (p: IconProps) => (
   <Stroke {...p}>
     <circle cx="12" cy="12" r="10" />
@@ -205,6 +224,13 @@ export const Clock = (p: IconProps) => (
   <Stroke {...p}>
     <path d="M12 6v6l4 2" />
     <circle cx="12" cy="12" r="10" />
+  </Stroke>
+);
+
+export const TrendingUp = (p: IconProps) => (
+  <Stroke {...p}>
+    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+    <polyline points="16 7 22 7 22 13" />
   </Stroke>
 );
 

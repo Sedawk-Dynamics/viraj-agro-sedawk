@@ -1,14 +1,10 @@
 import type { Metadata } from "next";
 import { Poppins, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import TopBar from "@/components/TopBar";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import ScrollReveal from "@/components/ScrollReveal";
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700", "800"],
   variable: "--font-poppins",
   display: "swap",
 });
@@ -22,24 +18,24 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://virajagronaturals.com"),
-  title: "Viraj Agro Naturals | Premium Agricultural Export Company",
+  title: "Viraj Agro Naturals | Premium Indian Moringa Exporter",
   description:
-    "India-based export trading company supplying premium agricultural products including Moringa Powder and Chicory Roots to UK, USA, Australia, and Europe. APEDA, FSSAI, and IEC compliant.",
+    "Viraj Agro Naturals is a specialized exporter of premium moringa products from India — sustainably sourced, carefully processed and export-ready for global markets. APEDA, FSSAI and IEC certified.",
   keywords: [
-    "agricultural export",
-    "moringa powder",
-    "chicory roots",
-    "bulk export",
-    "India export",
+    "moringa exporter",
+    "moringa leaf powder",
+    "moringa dried leaves",
+    "bulk moringa supply",
+    "India moringa export",
     "APEDA certified",
-    "organic products",
+    "private label moringa",
   ],
   authors: [{ name: "Viraj Agro Naturals" }],
   icons: { icon: "/images/logos.png" },
   openGraph: {
-    title: "Viraj Agro Naturals | Premium Agricultural Export Company",
+    title: "Viraj Agro Naturals | Premium Indian Moringa Exporter",
     description:
-      "Premium agricultural products exported globally with verified farm sourcing and reliable supply chains.",
+      "Premium moringa products exported globally — sustainably sourced, carefully processed, export-ready.",
     url: "https://virajagronaturals.com",
     siteName: "Viraj Agro Naturals",
     type: "website",
@@ -53,13 +49,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${poppins.variable} ${playfair.variable}`}>
-      <body>
-        <TopBar />
-        <Header />
-        <main>{children}</main>
-        <Footer />
-        <ScrollReveal />
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

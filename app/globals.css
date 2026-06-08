@@ -1,12 +1,17 @@
 /* =========================================================================
    Viraj Agro Naturals — Main Stylesheet
-   Converted from Next.js + Tailwind to plain HTML/CSS/JS
+   Next.js (App Router) + TypeScript + Tailwind CSS
    ========================================================================= */
 
-/* ---- Fonts ---- */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+/* ---- Tailwind layers (Preflight disabled in tailwind.config.ts) ---- */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* ---- Brand tokens (from app/globals.css) ---- */
+/* Fonts are loaded via next/font (Poppins + Playfair Display) in app/layout.tsx
+   and exposed as the CSS variables --font-poppins / --font-playfair. */
+
+/* ---- Brand tokens ---- */
 :root {
   --viraj-green-deep: #0B5D1E;
   --viraj-green-leaf: #2E7D32;
@@ -33,8 +38,8 @@
   --ring: #0B5D1E;
   --radius: 0.5rem;
 
-  --font-sans: 'Poppins', system-ui, sans-serif;
-  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: var(--font-poppins), 'Poppins', system-ui, sans-serif;
+  --font-serif: var(--font-playfair), 'Playfair Display', Georgia, serif;
 }
 
 /* ---- Reset ---- */
@@ -2052,3 +2057,34 @@ section { padding-block: 6rem; }
    Utility for line-clamp text balance fallback
    ========================================================================= */
 .text-balance { text-wrap: balance; }
+
+/* =========================================================================
+   TOP BAR — social icons (was inline <style> in the original pages)
+   ========================================================================= */
+.top-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.top-bar-socials {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-left: 12px;
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+}
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  color: inherit;
+  opacity: 0.75;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.social-icon:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}

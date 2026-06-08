@@ -4,7 +4,7 @@ import { Phone, Mail, MapPin, WhatsApp, Instagram, Linkedin } from "./Icons";
 const quickLinks = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
-  { label: "Our Moringa", href: "/products/moringa-powder" },
+  { label: "Products", href: "/products" },
   { label: "Process", href: "/#process" },
   { label: "For Bulk Buyers", href: "/#bulk" },
   { label: "Contact Us", href: "/contact" },

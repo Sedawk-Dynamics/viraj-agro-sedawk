@@ -7,8 +7,8 @@ import { Phone, Mail, Menu, X } from "./Icons";
 const links = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
+  { label: "Products", href: "/products" },
   { label: "Process", href: "/#process" },
-  { label: "For Bulk Buyers", href: "/#bulk" },
   { label: "Contact", href: "/contact" },
 ];
 

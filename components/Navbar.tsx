@@ -1,14 +1,15 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { Phone, Mail, Menu, X } from "./Icons";
 
 const links = [
-  { label: "Home", href: "#top" },
-  { label: "About Us", href: "#about" },
-  { label: "Process", href: "#process" },
-  { label: "For Bulk Buyers", href: "#bulk" },
-  { label: "Contact", href: "#footer" },
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/about" },
+  { label: "Process", href: "/#process" },
+  { label: "For Bulk Buyers", href: "/#bulk" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -34,26 +35,26 @@ export default function Navbar() {
       {/* Navbar */}
       <header className="sticky top-0 z-50 bg-white shadow-[0_1px_0_#E6E8E0]">
         <div className="mx-auto max-w-[1200px] px-5 h-[74px] flex items-center justify-between gap-4">
-          <a href="#top" className="leading-none">
+          <Link href="/" className="leading-none">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/images/logo.png" alt="Viraj Agro Naturals" className="h-11 w-auto" />
-          </a>
+          </Link>
 
           <nav className="hidden lg:flex items-center gap-[26px]">
             {links.map((l) => (
-              <a key={l.label} href={l.href} className="text-[0.93rem] font-medium text-[#27313B] hover:text-brand-deep transition-colors">
+              <Link key={l.label} href={l.href} className="text-[0.93rem] font-medium text-[#27313B] hover:text-brand-deep transition-colors">
                 {l.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
           <div className="flex items-center gap-4">
-            <a
-              href="#footer"
+            <Link
+              href="/contact"
               className="hidden sm:inline-flex items-center gap-2 bg-brand-accent text-white px-6 py-3 rounded-[10px] font-semibold text-[0.95rem] hover:bg-brand-light transition-colors"
             >
               Request Quote
-            </a>
+            </Link>
             <button
               className="lg:hidden text-brand-deep"
               aria-label="Toggle menu"
@@ -69,22 +70,22 @@ export default function Navbar() {
         {open && (
           <div className="lg:hidden bg-white border-t border-[#E6E8E0] px-5 pb-4">
             {links.map((l) => (
-              <a
+              <Link
                 key={l.label}
                 href={l.href}
                 onClick={() => setOpen(false)}
                 className="block py-3 border-b border-[#E6E8E0] font-medium text-[#27313B] hover:text-brand-deep"
               >
                 {l.label}
-              </a>
+              </Link>
             ))}
-            <a
-              href="#footer"
+            <Link
+              href="/contact"
               onClick={() => setOpen(false)}
               className="mt-4 inline-flex items-center gap-2 bg-brand-accent text-white px-6 py-3 rounded-[10px] font-semibold"
             >
               Request Quote
-            </a>
+            </Link>
           </div>
         )}
       </header>

@@ -1,6 +1,5 @@
 import { Fragment } from "react";
-import Navbar from "@/components/Navbar";
-import SiteFooter from "@/components/SiteFooter";
+import Link from "next/link";
 import {
   Leaf,
   Shield,
@@ -51,20 +50,13 @@ const whyCards: { Icon: (p: IconProps) => JSX.Element; title: string; desc: stri
   { Icon: Package, title: "Bulk Supply Available", desc: "Consistent quality with custom packaging for bulk orders." },
 ];
 
-type Product = {
-  title: string;
-  desc: string;
-  img?: string;
-  ph?: string;
-  grad?: string;
-  ondemand?: string;
-};
+type Product = { title: string; desc: string; img: string; href: string };
 
 const products: Product[] = [
-  { title: "Moringa Leaf Powder", desc: "Fine powder, rich green color, 100% pure.", img: "/images/moringa-powder.jpg" },
-  { title: "Moringa Dried Leaves", desc: "Carefully dried moringa leaves, high quality.", img: "/images/Moringa%20Dried%20Leaves.jpg" },
-  { title: "Moringa Tea Cut", desc: "Premium tea cut for infusions and blends.", img: "/images/Moringa%20Tea%20Cut.jpg" },
-  { title: "Custom Bulk Supply", desc: "Bulk orders with private label & custom packaging.", img: "/images/packaging.jpg" },
+  { title: "Moringa Leaf Powder", desc: "Fine powder, rich green color, 100% pure.", img: "/images/moringa-powder.jpg", href: "/products/moringa-powder" },
+  { title: "Moringa Dried Leaves", desc: "Carefully dried moringa leaves, high quality.", img: "/images/Moringa%20Dried%20Leaves.jpg", href: "/contact" },
+  { title: "Moringa Tea Cut", desc: "Premium tea cut for infusions and blends.", img: "/images/Moringa%20Tea%20Cut.jpg", href: "/contact" },
+  { title: "Custom Bulk Supply", desc: "Bulk orders with private label & custom packaging.", img: "/images/packaging.jpg", href: "/contact" },
 ];
 
 type Step = { n: number; title: string; desc: string; img?: string; ph?: string; grad?: string };
@@ -104,9 +96,7 @@ function SectionHeading({ title, light = false }: { title: string; light?: boole
 
 export default function HomePage() {
   return (
-    <div className="bg-white text-[#27313B]">
-      <Navbar />
-
+    <>
       {/* ============ HERO ============ */}
       <section id="top" className="bg-white pt-16 pb-14">
         <div className="mx-auto max-w-[1200px] px-5 grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-12 items-center">
@@ -189,26 +179,24 @@ export default function HomePage() {
           <SectionHeading title="Our Moringa Products" />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[22px]">
             {products.map((p) => (
-              <div
+              <Link
                 key={p.title}
-                className="bg-white border border-[#E6E8E0] rounded-[14px] overflow-hidden shadow-sm transition hover:-translate-y-[5px] hover:shadow-xl"
+                href={p.href}
+                className="group block bg-white border border-[#E6E8E0] rounded-[14px] overflow-hidden shadow-sm transition hover:-translate-y-[5px] hover:shadow-xl"
               >
-                {p.img ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img src={p.img} alt={p.title} className="w-full aspect-[4/3] object-cover" />
-                ) : (
-                  <div className={`aspect-[4/3] flex items-center justify-center text-white font-semibold text-sm bg-gradient-to-br ${p.grad}`}>
-                    {p.ph}
-                  </div>
-                )}
+                <div className="aspect-[4/3] overflow-hidden">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={p.img}
+                    alt={p.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
                 <div className="p-[18px_16px_22px] text-center">
                   <h3 className="text-[1.02rem] font-semibold text-brand-deep mb-2">{p.title}</h3>
-                  {p.ondemand && (
-                    <span className="block text-[0.7rem] font-medium text-brand-light -mt-1 mb-1.5">{p.ondemand}</span>
-                  )}
                   <p className="text-[0.8rem] text-gray-500">{p.desc}</p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -331,7 +319,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <SiteFooter />
-    </div>
+    </>
   );
 }

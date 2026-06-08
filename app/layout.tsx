@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Poppins, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import SiteFooter from "@/components/SiteFooter";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -49,7 +51,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${poppins.variable} ${playfair.variable}`}>
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        <main className="bg-white text-[#27313B]">{children}</main>
+        <SiteFooter />
+      </body>
     </html>
   );
 }

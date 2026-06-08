@@ -8,10 +8,26 @@
   html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 90px;
   }
   body {
     font-family: var(--font-poppins), system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-brand-accent text-white px-6 py-3 rounded-[10px] font-semibold hover:bg-brand-light transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-brand-accent/30;
+  }
+  .btn-soft {
+    @apply inline-flex items-center justify-center gap-2 bg-white text-brand-deep border-[1.5px] border-[#E6E8E0] px-6 py-3 rounded-[10px] font-semibold hover:bg-brand-cream transition-colors;
+  }
+  .btn-ghost-light {
+    @apply inline-flex items-center justify-center gap-2 bg-white/10 text-white border border-white/40 px-6 py-3 rounded-[10px] font-semibold hover:bg-white/20 transition-colors backdrop-blur;
+  }
+  .btn-white {
+    @apply inline-flex items-center justify-center gap-2 bg-white text-brand-deep px-6 py-3 rounded-[10px] font-semibold hover:bg-brand-cream transition-all hover:-translate-y-0.5 hover:shadow-lg;
   }
 }

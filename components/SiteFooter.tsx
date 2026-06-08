@@ -1,13 +1,13 @@
+import Link from "next/link";
 import { Phone, Mail, MapPin, WhatsApp, Instagram, Linkedin } from "./Icons";
 
 const quickLinks = [
-  { label: "Home", href: "#top" },
-  { label: "About Us", href: "#about" },
-  { label: "Our Moringa", href: "#products" },
-  { label: "Quality", href: "#quality" },
-  { label: "Process", href: "#process" },
-  { label: "For Bulk Buyers", href: "#bulk" },
-  { label: "Contact Us", href: "#footer" },
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/about" },
+  { label: "Our Moringa", href: "/products/moringa-powder" },
+  { label: "Process", href: "/#process" },
+  { label: "For Bulk Buyers", href: "/#bulk" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 export default function SiteFooter() {
@@ -47,7 +47,7 @@ export default function SiteFooter() {
           <ul className="space-y-[11px] text-[0.88rem] text-white/70">
             {quickLinks.map((l) => (
               <li key={l.label}>
-                <a href={l.href} className="hover:text-white">{l.label}</a>
+                <Link href={l.href} className="hover:text-white">{l.label}</Link>
               </li>
             ))}
           </ul>

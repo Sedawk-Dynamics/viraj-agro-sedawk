@@ -62,9 +62,8 @@ type Product = {
 
 const products: Product[] = [
   { title: "Moringa Leaf Powder", desc: "Fine powder, rich green color, 100% pure.", img: "/images/moringa-powder.jpg" },
-  { title: "Moringa Dried Leaves", desc: "Carefully dried moringa leaves, high quality.", ph: "Dried Leaves", grad: "from-[#5aa861] to-[#1f5a2c]" },
-  { title: "Moringa Tea Cut", desc: "Premium tea cut for infusions and blends.", ph: "Tea Cut", grad: "from-[#6fb873] to-[#246b30]" },
-  { title: "Moringa Capsules", desc: "Custom capsule filling for your brand.", ondemand: "(On Demand)", ph: "Capsules", grad: "from-[#86c98a] to-[#2c7a39]" },
+  { title: "Moringa Dried Leaves", desc: "Carefully dried moringa leaves, high quality.", img: "/images/Moringa%20Dried%20Leaves.jpg" },
+  { title: "Moringa Tea Cut", desc: "Premium tea cut for infusions and blends.", img: "/images/Moringa%20Tea%20Cut.jpg" },
   { title: "Custom Bulk Supply", desc: "Bulk orders with private label & custom packaging.", img: "/images/packaging.jpg" },
 ];
 
@@ -188,7 +187,7 @@ export default function HomePage() {
       <section id="products" className="bg-white py-[70px]">
         <div className="mx-auto max-w-[1200px] px-5">
           <SectionHeading title="Our Moringa Products" />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-[22px]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[22px]">
             {products.map((p) => (
               <div
                 key={p.title}

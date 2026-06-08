@@ -3,6 +3,7 @@ import { Poppins, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import SiteFooter from "@/components/SiteFooter";
+import IntroAnimation from "@/components/IntroAnimation";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -55,6 +56,7 @@ export default function RootLayout({
         <Navbar />
         <main className="bg-white text-[#27313B]">{children}</main>
         <SiteFooter />
+        <IntroAnimation />
       </body>
     </html>
   );

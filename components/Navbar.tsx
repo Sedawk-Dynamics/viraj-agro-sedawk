@@ -37,7 +37,7 @@ export default function Navbar() {
         <div className="mx-auto max-w-[1200px] px-5 h-[74px] flex items-center justify-between gap-4">
           <Link href="/" className="leading-none">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/logo.png" alt="Viraj Agro Naturals" className="h-11 w-auto" />
+            <img id="site-logo" src="/images/logo.png" alt="Viraj Agro Naturals" className="h-11 w-auto" />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-[26px]">

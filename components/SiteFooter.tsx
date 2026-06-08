@@ -16,12 +16,8 @@ export default function SiteFooter() {
       <div className="mx-auto max-w-[1200px] px-5 py-[54px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1.2fr] gap-10">
         {/* Brand */}
         <div>
-          <div className="leading-none">
-            <span className="block text-[1.6rem] font-extrabold tracking-[0.06em] text-white">VIRAJ</span>
-            <span className="block text-[0.55rem] font-semibold tracking-[0.32em] text-brand-light mt-[3px]">
-              AGRO NATURALS
-            </span>
-          </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/images/logo.png" alt="Viraj Agro Naturals" className="h-12 w-auto brightness-0 invert" />
           <p className="text-[0.85rem] mt-4 text-white/70 leading-relaxed">
             Specialized in premium moringa products exported from India to global markets with quality,
             integrity and commitment.
@@ -69,7 +65,7 @@ export default function SiteFooter() {
             {["APEDA", "FSSAI", "IEC"].map((b) => (
               <div
                 key={b}
-                className="w-[54px] h-10 rounded-lg bg-white flex items-center justify-center text-[0.6rem] font-bold text-brand-deep"
+                className="w-[68px] h-[52px] rounded-xl bg-white flex items-center justify-center text-[0.72rem] font-bold text-brand-deep shadow-sm"
               >
                 {b}
               </div>

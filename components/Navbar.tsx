@@ -37,10 +37,8 @@ export default function Navbar() {
       <header className="sticky top-0 z-50 bg-white shadow-[0_1px_0_#E6E8E0]">
         <div className="mx-auto max-w-[1200px] px-5 h-[74px] flex items-center justify-between gap-4">
           <a href="#top" className="leading-none">
-            <span className="block text-[1.6rem] font-extrabold tracking-[0.06em] text-brand-deep">VIRAJ</span>
-            <span className="block text-[0.55rem] font-semibold tracking-[0.32em] text-brand-light mt-[3px]">
-              AGRO NATURALS
-            </span>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/logo.png" alt="Viraj Agro Naturals" className="h-11 w-auto" />
           </a>
 
           <nav className="hidden lg:flex items-center gap-[26px]">

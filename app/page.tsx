@@ -273,7 +273,7 @@ export default function HomePage() {
 
       {/* ============ ABOUT + FOR BULK BUYERS ============ */}
       <section id="about" className="bg-white py-[70px]">
-        <div className="mx-auto max-w-[1200px] px-5 grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr_1fr] gap-10 items-start">
+        <div className="mx-auto max-w-[1200px] px-5 grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr_1fr] gap-10 items-stretch">
           {/* About */}
           <div>
             <h2 className="text-[1.55rem] font-bold text-brand-deep mb-[18px]">About Viraj Agro Naturals</h2>
@@ -305,17 +305,17 @@ export default function HomePage() {
           </div>
 
           {/* Truck image */}
-          <div className="rounded-[14px] overflow-hidden shadow-[0_10px_25px_-12px_rgba(20,83,45,0.25)]">
+          <div className="rounded-[14px] overflow-hidden shadow-[0_10px_25px_-12px_rgba(20,83,45,0.25)] lg:h-full">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/global-shipping.jpg"
               alt="Viraj Agro Naturals export — shipping containers and truck"
-              className="w-full aspect-[4/3] object-cover"
+              className="w-full aspect-[4/3] object-cover lg:aspect-auto lg:h-full"
             />
           </div>
 
           {/* For Bulk Buyers */}
-          <div id="bulk">
+          <div id="bulk" className="lg:flex lg:flex-col lg:justify-center">
             <h2 className="text-[1.55rem] font-bold text-brand-deep mb-5">For Bulk Buyers</h2>
             <ul className="flex flex-col gap-[14px] mb-[26px]">
               {bulkPoints.map((t) => (

@@ -62,12 +62,17 @@ export default function SiteFooter() {
             <li>IEC Certified</li>
           </ul>
           <div className="flex gap-2.5 mt-4">
-            {["APEDA", "FSSAI", "IEC"].map((b) => (
+            {[
+              { src: "/images/apeda.jpg", alt: "APEDA Certified" },
+              { src: "/images/fssai.jpg", alt: "FSSAI Registered" },
+              { src: "/images/iec.png", alt: "IEC Certified" },
+            ].map((b) => (
               <div
-                key={b}
-                className="w-[68px] h-[52px] rounded-xl bg-white flex items-center justify-center text-[0.72rem] font-bold text-brand-deep shadow-sm"
+                key={b.src}
+                className="w-[68px] h-[52px] rounded-xl bg-white flex items-center justify-center p-1.5 shadow-sm overflow-hidden"
               >
-                {b}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={b.src} alt={b.alt} className="max-w-full max-h-full object-contain" />
               </div>
             ))}
           </div>

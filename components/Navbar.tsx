@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Phone, Mail, Menu, X } from "./Icons";
+import { Phone, Mail, Menu, X, Facebook, Instagram, Linkedin, WhatsApp, Youtube } from "./Icons";
 
 const links = [
   { label: "Home", href: "/" },
@@ -12,6 +12,14 @@ const links = [
   { label: "Contact", href: "/contact" },
 ];
 
+const socials = [
+  { Icon: Facebook, href: "https://facebook.com", label: "Facebook", color: "#1877F2" },
+  { Icon: Instagram, href: "https://instagram.com", label: "Instagram", color: "#E4405F" },
+  { Icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn", color: "#0A66C2" },
+  { Icon: WhatsApp, href: "https://wa.me/918737958006", label: "WhatsApp", color: "#25D366" },
+  { Icon: Youtube, href: "https://youtube.com", label: "YouTube", color: "#FF0000" },
+];
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
@@ -19,8 +27,8 @@ export default function Navbar() {
     <>
       {/* Utility bar */}
       <div className="bg-brand-band text-[#e6f0e8] text-[0.82rem]">
-        <div className="mx-auto max-w-[1200px] px-5 py-2 flex flex-wrap items-center justify-between gap-3">
-          <div className="flex flex-wrap items-center gap-5">
+        <div className="mx-auto max-w-[1200px] px-5 py-2 flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
             <a href="tel:+918737958006" className="inline-flex items-center gap-2 hover:text-white">
               <Phone size={14} /> +91 8737958006
             </a>
@@ -28,7 +36,25 @@ export default function Navbar() {
               <Mail size={14} /> official@virajagronaturals.com
             </a>
           </div>
-          <span>APEDA | FSSAI | IEC Certified</span>
+
+          <div className="flex items-center gap-3">
+            <span>APEDA | FSSAI | IEC Certified</span>
+            <div className="flex items-center gap-1.5 pl-3 border-l border-white/25">
+              {socials.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={s.label}
+                  className="w-7 h-7 rounded-full bg-white flex items-center justify-center transition-transform hover:scale-110 hover:shadow"
+                  style={{ color: s.color }}
+                >
+                  <s.Icon size={14} />
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 
@@ -40,21 +66,15 @@ export default function Navbar() {
             <img id="site-logo" src="/images/logo.png" alt="Viraj Agro Naturals" className="h-11 w-auto" />
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-[26px]">
-            {links.map((l) => (
-              <Link key={l.label} href={l.href} className="text-[0.93rem] font-medium text-[#27313B] hover:text-brand-deep transition-colors">
-                {l.label}
-              </Link>
-            ))}
-          </nav>
+          <div className="flex items-center gap-8">
+            <nav className="hidden lg:flex items-center gap-[30px]">
+              {links.map((l) => (
+                <Link key={l.label} href={l.href} className="text-[0.95rem] font-medium text-[#27313B] hover:text-brand-deep transition-colors">
+                  {l.label}
+                </Link>
+              ))}
+            </nav>
 
-          <div className="flex items-center gap-4">
-            <Link
-              href="/contact"
-              className="hidden sm:inline-flex items-center gap-2 bg-brand-accent text-white px-6 py-3 rounded-[10px] font-semibold text-[0.95rem] hover:bg-brand-light transition-colors"
-            >
-              Request Quote
-            </Link>
             <button
               className="lg:hidden text-brand-deep"
               aria-label="Toggle menu"
@@ -79,13 +99,6 @@ export default function Navbar() {
                 {l.label}
               </Link>
             ))}
-            <Link
-              href="/contact"
-              onClick={() => setOpen(false)}
-              className="mt-4 inline-flex items-center gap-2 bg-brand-accent text-white px-6 py-3 rounded-[10px] font-semibold"
-            >
-              Request Quote
-            </Link>
           </div>
         )}
       </header>

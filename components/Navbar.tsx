@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Phone, Mail, Menu, X, Facebook, Instagram, Linkedin, WhatsApp, Youtube } from "./Icons";
+import { Phone, Mail, Menu, X, Facebook, Instagram, Linkedin, WhatsApp } from "./Icons";
 
 const links = [
   { label: "Home", href: "/" },
@@ -13,11 +13,10 @@ const links = [
 ];
 
 const socials = [
-  { Icon: Facebook, href: "https://facebook.com", label: "Facebook", color: "#1877F2" },
-  { Icon: Instagram, href: "https://instagram.com", label: "Instagram", color: "#E4405F" },
-  { Icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn", color: "#0A66C2" },
+  { Icon: Facebook, href: "https://www.facebook.com/virajnaturals/", label: "Facebook", color: "#1877F2" },
+  { Icon: Instagram, href: "https://www.instagram.com/virajagronaturals/", label: "Instagram", color: "#E4405F" },
+  { Icon: Linkedin, href: "https://www.linkedin.com/company/viraj-agro-naturals-private-limited", label: "LinkedIn", color: "#0A66C2" },
   { Icon: WhatsApp, href: "https://wa.me/918737958006", label: "WhatsApp", color: "#25D366" },
-  { Icon: Youtube, href: "https://youtube.com", label: "YouTube", color: "#FF0000" },
 ];
 
 export default function Navbar() {

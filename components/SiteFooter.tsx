@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Phone, Mail, MapPin, WhatsApp, Instagram, Linkedin } from "./Icons";
+import { Phone, Mail, MapPin, Instagram, Linkedin, Facebook, X } from "./Icons";
 
 const quickLinks = [
   { label: "Home", href: "/" },
@@ -24,15 +24,17 @@ export default function SiteFooter() {
           </p>
           <div className="flex gap-3 mt-5">
             {[
-              { Icon: WhatsApp, href: "https://wa.me/918737958006", label: "WhatsApp" },
-              { Icon: Instagram, href: "#", label: "Instagram" },
-              { Icon: Linkedin, href: "#", label: "LinkedIn" },
-              { Icon: Mail, href: "mailto:official@virajagronaturals.com", label: "Email" },
+              { Icon: Instagram, href: "https://www.instagram.com/virajagronaturals/", label: "Instagram" },
+              { Icon: X, href: "https://x.com/virajnaturals", label: "Twitter / X" },
+              { Icon: Facebook, href: "https://www.facebook.com/virajnaturals/", label: "Facebook" },
+              { Icon: Linkedin, href: "https://www.linkedin.com/company/viraj-agro-naturals-private-limited", label: "LinkedIn" },
             ].map(({ Icon, href, label }) => (
               <a
                 key={label}
                 href={href}
                 aria-label={label}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full border border-white/30 flex items-center justify-center hover:bg-white/15 transition"
               >
                 <Icon size={16} />
@@ -93,12 +95,6 @@ export default function SiteFooter() {
           <div className="flex items-center gap-2.5 text-[0.88rem] mb-[13px]">
             <MapPin size={16} /> India
           </div>
-          <a
-            href="https://wa.me/918737958006"
-            className="mt-1.5 inline-flex items-center gap-2 border-[1.5px] border-white/55 text-white px-6 py-3 rounded-[10px] font-semibold hover:bg-white/10 transition"
-          >
-            WhatsApp Us <WhatsApp size={16} />
-          </a>
         </div>
       </div>
 

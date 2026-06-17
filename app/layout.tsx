@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import SiteFooter from "@/components/SiteFooter";
 import IntroAnimation from "@/components/IntroAnimation";
+import ChatWidget from "@/components/ChatWidget";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -57,6 +58,7 @@ export default function RootLayout({
         <main className="bg-white text-[#27313B]">{children}</main>
         <SiteFooter />
         <IntroAnimation />
+        <ChatWidget />
       </body>
     </html>
   );

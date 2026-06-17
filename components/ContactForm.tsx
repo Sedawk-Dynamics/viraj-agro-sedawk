@@ -93,9 +93,7 @@ export default function ContactForm() {
             <option value="moringa-powder">Moringa Leaf Powder</option>
             <option value="dried-leaves">Moringa Dried Leaves</option>
             <option value="tea-cut">Moringa Tea Cut</option>
-            <option value="bulk">Custom Bulk Supply</option>
-            <option value="other">Other / General Inquiry</option>
-          </select>
+            </select>
         </div>
 
         <div>
@@ -110,7 +108,7 @@ export default function ContactForm() {
             name="message"
             required
             rows={5}
-            placeholder="Tell us about your requirements, including specifications, delivery timeline, etc."
+            placeholder="Tell us about your requirements, including specifications, delivery timeline, packaging etc."
             className={`${field} resize-none`}
           />
         </div>

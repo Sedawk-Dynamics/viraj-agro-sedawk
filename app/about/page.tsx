@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 const stats = [
   { end: 100, suffix: "%", label: "Quality Assured" },
-  { end: 6, suffix: "+", label: "Global Regions" },
+  { end: 6, suffix: "+", label: "Countries Shipped" },
   { end: 100, suffix: "%", label: "Batch Traceable" },
   { end: 3, suffix: "", label: "Certifications" },
 ];
@@ -83,7 +83,7 @@ export default function AboutPage() {
           <Reveal from="right" className="relative">
             <div className="rounded-2xl overflow-hidden shadow-[0_25px_50px_-12px_rgba(20,83,45,0.25)] aspect-[4/3]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/hero-farm.jpg" alt="Indian agricultural farms" className="w-full h-full object-cover" />
+              <img src="/images/hero-farm.png" alt="Indian agricultural farms" className="w-full h-full object-cover object-top" />
             </div>
             <div className="hidden md:block absolute -bottom-7 -right-5 bg-brand-accent text-white px-6 py-5 rounded-2xl shadow-xl">
               <p className="text-sm text-white/85">Established</p>
@@ -93,19 +93,19 @@ export default function AboutPage() {
 
           <div>
             <Reveal><span className="inline-block px-4 py-1.5 rounded-full bg-brand-accent/10 text-brand-deep text-sm font-medium">Our Story</span></Reveal>
-            <Reveal delay={80}><h2 className="mt-4 text-3xl md:text-4xl font-bold text-brand-deep leading-tight">Building Trust Through Quality and Transparency</h2></Reveal>
+            <Reveal delay={80}><h2 className="mt-4 text-4xl md:text-5xl font-bold text-brand-deep leading-tight">Building Trust Through Quality and Transparency</h2></Reveal>
             <Reveal delay={140}><p className="mt-5 text-gray-500 text-lg leading-relaxed">Viraj Agro Naturals Private Limited is an India-based export trading company founded with a clear mission: to supply premium moringa products to global markets while maintaining the highest standards of quality and transparency.</p></Reveal>
-            <Reveal delay={200}><p className="mt-4 text-gray-500 leading-relaxed">Based in Kanpur, Uttar Pradesh, we have strategically positioned ourselves at the heart of India's agricultural belt. This allows us to work directly with verified farms across the country, ensuring authentic sourcing and sustainable practices.</p></Reveal>
-            <Reveal delay={260}><p className="mt-4 text-gray-500 leading-relaxed">Every shipment we dispatch is backed by complete documentation, accredited lab testing, and full batch traceability from farm to destination.</p></Reveal>
+            <Reveal delay={200}><p className="mt-4 text-gray-500 text-lg leading-relaxed">Based in Kanpur, Uttar Pradesh, we have strategically positioned ourselves at the heart of India's agricultural belt. This allows us to work directly with verified farms across the country, ensuring authentic sourcing and sustainable practices.</p></Reveal>
+            <Reveal delay={260}><p className="mt-4 text-gray-500 text-lg leading-relaxed">Every shipment we dispatch is backed by complete documentation, accredited lab testing, and full batch traceability from farm to destination.</p></Reveal>
             <Reveal delay={320}>
               <div className="mt-7 grid grid-cols-2 gap-5">
                 <div className="p-4 rounded-xl bg-brand-cream">
                   <p className="text-2xl font-extrabold text-brand-deep">APEDA</p>
-                  <p className="text-sm text-gray-500">Registered Exporter</p>
+                  <p className="text-base text-gray-500">Registered Exporter</p>
                 </div>
                 <div className="p-4 rounded-xl bg-brand-cream">
                   <p className="text-2xl font-extrabold text-brand-deep">FSSAI</p>
-                  <p className="text-sm text-gray-500">Fully Compliant</p>
+                  <p className="text-base text-gray-500">Fully Compliant</p>
                 </div>
               </div>
             </Reveal>
@@ -118,7 +118,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-[1200px] px-5">
           <div className="text-center mb-12">
             <Reveal><span className="inline-block px-4 py-1.5 rounded-full bg-brand-accent/10 text-brand-deep text-sm font-medium">What Drives Us</span></Reveal>
-            <Reveal delay={80}><h2 className="mt-4 text-3xl md:text-4xl font-bold text-brand-deep">Mission, Vision &amp; Values</h2></Reveal>
+            <Reveal delay={80}><h2 className="mt-4 text-4xl md:text-5xl font-bold text-brand-deep">Mission, Vision &amp; Values</h2></Reveal>
             <Reveal delay={140}><p className="mt-3 text-gray-500 max-w-2xl mx-auto">Our commitment to excellence guides every decision we make and every product we export.</p></Reveal>
           </div>
           <div className="grid md:grid-cols-3 gap-7">
@@ -128,8 +128,8 @@ export default function AboutPage() {
                   <div className="w-16 h-16 rounded-2xl bg-brand-deep text-white flex items-center justify-center mb-6">
                     <Icon size={32} />
                   </div>
-                  <h3 className="text-xl font-bold text-brand-deep mb-3">{title}</h3>
-                  <p className="text-gray-500 leading-relaxed">{desc}</p>
+                  <h3 className="text-2xl font-bold text-brand-deep mb-3">{title}</h3>
+                  <p className="text-gray-500 text-lg leading-relaxed">{desc}</p>
                 </div>
               </Reveal>
             ))}
@@ -142,7 +142,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-[1200px] px-5 grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <Reveal><span className="inline-block px-4 py-1.5 rounded-full bg-brand-accent/10 text-brand-deep text-sm font-medium">Quality Assurance</span></Reveal>
-            <Reveal delay={80}><h2 className="mt-4 text-3xl md:text-4xl font-bold text-brand-deep leading-tight">Uncompromising Commitment to Quality</h2></Reveal>
+            <Reveal delay={80}><h2 className="mt-4 text-4xl md:text-5xl font-bold text-brand-deep leading-tight">Uncompromising Commitment to Quality</h2></Reveal>
             <Reveal delay={140}><p className="mt-5 text-gray-500 text-lg leading-relaxed">Quality is not just a promise at Viraj Agro Naturals—it&apos;s embedded in every aspect of our operations. From farm selection to final shipment, we maintain rigorous standards that global buyers can rely on.</p></Reveal>
             <div className="mt-7 space-y-4">
               {qPoints.map((q, i) => (
@@ -151,7 +151,7 @@ export default function AboutPage() {
                     <CheckCircle size={24} className="text-brand-accent shrink-0 mt-0.5" />
                     <div>
                       <h4 className="font-semibold text-brand-deep">{q.title}</h4>
-                      <p className="text-sm text-gray-500 mt-0.5">{q.desc}</p>
+                      <p className="text-base text-gray-500 mt-0.5">{q.desc}</p>
                     </div>
                   </div>
                 </Reveal>
@@ -172,7 +172,7 @@ export default function AboutPage() {
               <div className="h-full bg-brand-cream rounded-xl p-6">
                 <CheckCircle size={32} className="text-brand-accent mb-4" />
                 <h4 className="font-semibold text-brand-deep mb-2">{q.title}</h4>
-                <p className="text-sm text-gray-500">{q.desc}</p>
+                <p className="text-base text-gray-500">{q.desc}</p>
               </div>
             </Reveal>
           ))}
@@ -184,7 +184,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-[1200px] px-5">
           <div className="text-center mb-12">
             <Reveal><span className="inline-block px-4 py-1.5 rounded-full bg-white/10 text-white text-sm font-medium">Leadership</span></Reveal>
-            <Reveal delay={80}><h2 className="mt-4 text-3xl md:text-4xl font-bold text-white">Meet Our Team</h2></Reveal>
+            <Reveal delay={80}><h2 className="mt-4 text-4xl md:text-5xl font-bold text-white">Meet Our Team</h2></Reveal>
             <Reveal delay={140}><p className="mt-3 text-white/80 max-w-2xl mx-auto">Dedicated professionals committed to delivering excellence in agricultural exports.</p></Reveal>
           </div>
           <div className="grid md:grid-cols-2 gap-7 max-w-4xl mx-auto">

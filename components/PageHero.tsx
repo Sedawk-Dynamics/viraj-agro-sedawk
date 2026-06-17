@@ -20,12 +20,12 @@ export default function PageHero({
   children?: ReactNode;
 }) {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-brand-band to-[#0f3d20] text-white">
+    <section className={`relative overflow-hidden text-white ${image ? "" : "bg-gradient-to-br from-brand-band to-[#0f3d20]"}`}>
       {image && (
         <div className="absolute inset-0">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={image} alt="" className="w-full h-full object-cover opacity-30" />
-          <div className="absolute inset-0 bg-gradient-to-r from-brand-deep/90 via-brand-deep/75 to-brand-deep/40" />
+          <img src={image} alt="" className="w-full h-full object-cover object-top" />
+          <div className="absolute inset-0 bg-black/45" />
         </div>
       )}
 
@@ -44,12 +44,12 @@ export default function PageHero({
             </span>
           </Reveal>
           <Reveal delay={80}>
-            <h1 className="mt-6 text-[2.2rem] sm:text-[2.8rem] lg:text-[3.4rem] font-extrabold leading-[1.1] tracking-[-0.02em] text-white">
+            <h1 className="mt-6 text-[2.6rem] sm:text-[3.4rem] lg:text-[4.2rem] font-extrabold leading-[1.1] tracking-[-0.02em] text-white">
               {title} {highlight && <span className="text-brand-cream">{highlight}</span>}
             </h1>
           </Reveal>
           <Reveal delay={160}>
-            <p className={`mt-5 text-lg text-white/85 leading-relaxed ${align === "center" ? "max-w-2xl mx-auto" : ""}`}>
+            <p className={`mt-5 text-xl text-white/85 leading-relaxed ${align === "center" ? "max-w-2xl mx-auto" : ""}`}>
               {subtitle}
             </p>
           </Reveal>

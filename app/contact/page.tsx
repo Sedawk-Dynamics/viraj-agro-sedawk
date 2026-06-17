@@ -14,7 +14,7 @@ const info = [
   { Icon: Phone, label: "Phone", value: "+91 8737958006", href: "tel:+918737958006" },
   { Icon: Mail, label: "General Enquiries", value: "official@virajagronaturals.com", href: "mailto:official@virajagronaturals.com" },
   { Icon: Mail, label: "Export Enquiries", value: "enquiry@virajagronaturals.com", href: "mailto:enquiry@virajagronaturals.com" },
-  { Icon: MapPin, label: "Office Address", value: "EWS 429 A Double Storey, Barra 2, Kanpur, Uttar Pradesh, India" },
+  { Icon: MapPin, label: "Office Address", value: "429 A Double Storey, Barra 2, Kanpur, Uttar Pradesh, India" },
 ];
 
 const business = [

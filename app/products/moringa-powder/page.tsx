@@ -29,7 +29,6 @@ const specs = [
   { label: "Processing", value: "Shade Dried & Ground" },
   { label: "Mesh Size", value: "80-100 Mesh" },
   { label: "Color", value: "Dark Green" },
-  { label: "Shelf Life", value: "24 Months" },
 ];
 
 const benefits = [
@@ -61,6 +60,24 @@ const supply = [
   { Icon: Package, label: "Custom packaging" },
 ];
 
+const customPack = [
+  { title: "Private Label Ready", desc: "We support full private label packaging — your brand on our premium product." },
+  { title: "Custom Bag Sizes", desc: "Available in 1 KG, 5 KG, 10 KG, 25 KG and 50 KG to match your requirements." },
+  { title: "Branded Outer Cartons", desc: "Cartons printed to your specifications for professional shelf presentation." },
+  { title: "Vacuum-Sealed Options", desc: "Nitrogen-flushed, vacuum-sealed packaging for extended shelf freshness." },
+  { title: "Retail-Ready Packs", desc: "Consumer-ready packaging suitable for direct retail placement." },
+  { title: "OEM Bulk Supply", desc: "Unbranded bulk supply for in-house packing and private processing." },
+];
+
+const exportFeatures = [
+  { Icon: Shield, title: "APEDA Registered", desc: "Officially registered exporter under APEDA for agricultural commodities." },
+  { Icon: FileCheck, title: "FSSAI Compliant", desc: "All products meet FSSAI standards ensuring food safety compliance." },
+  { Icon: FileText, title: "Phytosanitary Certificate", desc: "Phytosanitary certificates issued with all international shipments." },
+  { Icon: FlaskConical, title: "Certificate of Analysis", desc: "NABL lab-issued COA provided with every batch for full transparency." },
+  { Icon: Globe, title: "IEC Certified", desc: "Import Export Code registered for seamless international trade clearance." },
+  { Icon: Truck, title: "Worldwide Delivery", desc: "Reliable freight solutions to Europe, USA, Asia, Middle East and beyond." },
+];
+
 export default function MoringaPowderPage() {
   return (
     <>
@@ -68,7 +85,7 @@ export default function MoringaPowderPage() {
         eyebrow="Premium Export Product"
         title="Moringa Powder"
         subtitle="Nature's Superfood from India — premium Moringa Oleifera leaf powder, sustainably sourced and export-ready."
-        image="/images/moringa-hero.jpg"
+        image="/images/moringa-powder-hero.png"
         align="left"
       >
         <Link href="/contact" className="btn-primary">Send Enquiry <ArrowRight size={18} /></Link>
@@ -81,7 +98,7 @@ export default function MoringaPowderPage() {
           <Reveal from="right" className="relative">
             <div className="rounded-2xl overflow-hidden shadow-[0_25px_50px_-12px_rgba(20,83,45,0.25)] aspect-square">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/moringa-powder.jpg" alt="Premium Moringa Oleifera leaf powder" className="w-full h-full object-cover" />
+              <img src="/images/moringa-powder.png" alt="Premium Moringa Oleifera leaf powder" className="w-full h-full object-cover object-top" />
             </div>
             <div className="hidden md:block absolute -bottom-6 -right-5 bg-brand-deep text-white px-5 py-4 rounded-xl shadow-xl">
               <p className="text-sm font-medium">Export Quality</p>
@@ -91,14 +108,14 @@ export default function MoringaPowderPage() {
 
           <div>
             <Reveal><span className="inline-block px-4 py-1.5 rounded-full bg-brand-accent/10 text-brand-deep text-sm font-medium">Product Overview</span></Reveal>
-            <Reveal delay={80}><h2 className="mt-4 text-3xl md:text-4xl font-bold text-brand-deep leading-tight">Premium Moringa Oleifera Leaf Powder</h2></Reveal>
+            <Reveal delay={80}><h2 className="mt-4 text-4xl md:text-5xl font-bold text-brand-deep leading-tight">Premium Moringa Oleifera Leaf Powder</h2></Reveal>
             <Reveal delay={140}><p className="mt-5 text-gray-500 leading-relaxed">Moringa Oleifera, known as the &apos;Miracle Tree,&apos; is one of the most nutrient-dense plants on earth. Our premium moringa powder is made from carefully selected, organically grown moringa leaves that are processed to preserve their exceptional nutritional profile.</p></Reveal>
             <Reveal delay={200}><p className="mt-4 text-gray-500 leading-relaxed">We source our moringa from verified farms across India, ensuring sustainable cultivation practices and complete traceability. Each batch undergoes rigorous testing at NABL accredited laboratories to meet international quality and safety standards.</p></Reveal>
             <Reveal delay={260}>
               <div className="mt-7 grid grid-cols-2 gap-4">
                 {specs.map((s) => (
                   <div key={s.label} className="p-4 rounded-xl bg-brand-cream">
-                    <p className="text-sm text-gray-500">{s.label}</p>
+                    <p className="text-base text-gray-500">{s.label}</p>
                     <p className="font-semibold text-brand-deep">{s.value}</p>
                   </div>
                 ))}
@@ -113,7 +130,7 @@ export default function MoringaPowderPage() {
         <div className="mx-auto max-w-[1200px] px-5">
           <div className="text-center mb-12">
             <Reveal><span className="inline-block px-4 py-1.5 rounded-full bg-brand-accent/10 text-brand-deep text-sm font-medium">Benefits</span></Reveal>
-            <Reveal delay={80}><h2 className="mt-4 text-3xl md:text-4xl font-bold text-brand-deep">Health &amp; Nutritional Benefits</h2></Reveal>
+            <Reveal delay={80}><h2 className="mt-4 text-4xl md:text-5xl font-bold text-brand-deep">Health &amp; Nutritional Benefits</h2></Reveal>
             <Reveal delay={140}><p className="mt-3 text-gray-500 max-w-2xl mx-auto">Discover the exceptional properties that make moringa a premium choice for health-conscious consumers and businesses worldwide.</p></Reveal>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -123,7 +140,7 @@ export default function MoringaPowderPage() {
                   <div className="w-12 h-12 rounded-xl bg-brand-accent/10 text-brand-deep flex items-center justify-center shrink-0">
                     <CheckCircle size={22} />
                   </div>
-                  <h3 className="text-lg font-semibold text-brand-deep">{b}</h3>
+                  <h3 className="text-xl font-semibold text-brand-deep">{b}</h3>
                 </div>
               </Reveal>
             ))}
@@ -136,7 +153,7 @@ export default function MoringaPowderPage() {
         <div className="mx-auto max-w-[1200px] px-5 grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <Reveal><span className="inline-block px-4 py-1.5 rounded-full bg-white/10 text-white text-sm font-medium">Quality Assurance</span></Reveal>
-            <Reveal delay={80}><h2 className="mt-4 text-3xl md:text-4xl font-bold text-white leading-tight">Export Quality Standards You Can Trust</h2></Reveal>
+            <Reveal delay={80}><h2 className="mt-4 text-4xl md:text-5xl font-bold text-white leading-tight">Export Quality Standards You Can Trust</h2></Reveal>
             <Reveal delay={140}><p className="mt-5 text-white/85 text-lg leading-relaxed">Every product we export undergoes rigorous quality checks to ensure it meets international standards. From sourcing to shipping, quality is our top priority.</p></Reveal>
             <div className="mt-8 grid sm:grid-cols-2 gap-6">
               {quality.map((q, i) => (
@@ -174,7 +191,7 @@ export default function MoringaPowderPage() {
           </Reveal>
           <div>
             <Reveal><span className="inline-block px-4 py-1.5 rounded-full bg-brand-accent/10 text-brand-deep text-sm font-medium">Packaging &amp; Supply</span></Reveal>
-            <Reveal delay={80}><h2 className="mt-4 text-3xl md:text-4xl font-bold text-brand-deep leading-tight">Bulk Export Packaging</h2></Reveal>
+            <Reveal delay={80}><h2 className="mt-4 text-4xl md:text-5xl font-bold text-brand-deep leading-tight">Bulk Export Packaging</h2></Reveal>
             <Reveal delay={140}><p className="mt-5 text-gray-500 text-lg leading-relaxed">We offer flexible packaging options to meet your bulk export requirements. All packaging is food-grade and designed to maintain product quality during international transit.</p></Reveal>
             <div className="mt-7 space-y-3">
               {packOptions.map((p, i) => (
@@ -183,7 +200,7 @@ export default function MoringaPowderPage() {
                     <Package size={24} className="text-brand-accent shrink-0" />
                     <div>
                       <p className="font-semibold text-brand-deep">{p.size}</p>
-                      <p className="text-sm text-gray-500">{p.desc}</p>
+                      <p className="text-base text-gray-500">{p.desc}</p>
                     </div>
                   </div>
                 </Reveal>
@@ -192,12 +209,60 @@ export default function MoringaPowderPage() {
             <Reveal delay={120}>
               <div className="mt-6 grid grid-cols-2 gap-4">
                 {supply.map(({ Icon, label }) => (
-                  <div key={label} className="flex items-center gap-2.5 text-sm text-gray-500">
+                  <div key={label} className="flex items-center gap-2.5 text-base text-gray-500">
                     <Icon size={20} className="text-brand-accent shrink-0" /> {label}
                   </div>
                 ))}
               </div>
             </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Custom Packaging */}
+      <section className="bg-brand-cream py-[70px]">
+        <div className="mx-auto max-w-[1200px] px-5">
+          <div className="text-center mb-12">
+            <Reveal><span className="inline-block px-4 py-1.5 rounded-full bg-brand-accent/10 text-brand-deep text-sm font-medium">Custom Packaging</span></Reveal>
+            <Reveal delay={80}><h2 className="mt-4 text-4xl md:text-5xl font-bold text-brand-deep">Tailored Packaging for Your Brand</h2></Reveal>
+            <Reveal delay={140}><p className="mt-3 text-gray-500 max-w-2xl mx-auto">We offer complete custom packaging solutions — from private label to retail-ready packs — designed to meet your exact brand and market requirements.</p></Reveal>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {customPack.map((item, i) => (
+              <Reveal key={item.title} delay={(i % 3) * 100}>
+                <div className="h-full bg-white rounded-2xl p-6 transition hover:-translate-y-1 hover:shadow-xl">
+                  <div className="w-12 h-12 rounded-xl bg-brand-accent/10 text-brand-deep flex items-center justify-center mb-4">
+                    <Package size={22} />
+                  </div>
+                  <h3 className="font-semibold text-brand-deep mb-2">{item.title}</h3>
+                  <p className="text-base text-gray-500 leading-relaxed">{item.desc}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Export Friendly */}
+      <section className="bg-white py-[70px]">
+        <div className="mx-auto max-w-[1200px] px-5">
+          <div className="text-center mb-12">
+            <Reveal><span className="inline-block px-4 py-1.5 rounded-full bg-brand-accent/10 text-brand-deep text-sm font-medium">Export Friendly</span></Reveal>
+            <Reveal delay={80}><h2 className="mt-4 text-4xl md:text-5xl font-bold text-brand-deep">Built for Global Trade</h2></Reveal>
+            <Reveal delay={140}><p className="mt-3 text-gray-500 max-w-2xl mx-auto">Every shipment comes with complete export documentation, certifications and compliance support — making import clearance seamless for buyers worldwide.</p></Reveal>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {exportFeatures.map(({ Icon, title, desc }, i) => (
+              <Reveal key={title} delay={(i % 3) * 100}>
+                <div className="h-full bg-brand-cream rounded-2xl p-6 transition hover:-translate-y-1 hover:shadow-xl">
+                  <div className="w-12 h-12 rounded-xl bg-brand-deep text-white flex items-center justify-center mb-4">
+                    <Icon size={22} />
+                  </div>
+                  <h3 className="font-semibold text-brand-deep mb-2">{title}</h3>
+                  <p className="text-base text-gray-500 leading-relaxed">{desc}</p>
+                </div>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>

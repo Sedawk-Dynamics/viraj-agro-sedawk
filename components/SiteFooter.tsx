@@ -100,8 +100,8 @@ export default function SiteFooter() {
 
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-[1200px] px-5 py-[18px] flex flex-wrap justify-between gap-2.5 text-[0.8rem] text-white/60">
-          <span>© 2024 Viraj Agro Naturals. All Rights Reserved.</span>
-          <span>For Bulk Export Inquiries Only</span>
+          <span>© 2025 Viraj Agro Naturals. All Rights Reserved.</span>
+          <span>Designed by <a href="https://webel.io/" target="_blank" rel="noopener noreferrer" className="hover:text-white underline underline-offset-2">Webelio</a></span>
         </div>
       </div>
     </footer>

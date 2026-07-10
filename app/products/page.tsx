@@ -48,6 +48,14 @@ const products = [
     cta: "View Details",
   },
   {
+    title: "Moringa Capsules",
+    desc: "Convenient, nutrient-dense moringa leaf capsules — ideal for daily wellness supplementation.",
+    img: "/images/moringa-capsule.png",
+    tags: ["500 mg", "Vegetarian", "Export Grade"],
+    href: "/products/moringa-capsule",
+    cta: "View Details",
+  },
+  {
     title: "Custom Packaging",
     desc: "Bulk orders with private label and custom packaging tailored to your brand.",
     img: "/images/packaging.jpg",
@@ -58,7 +66,7 @@ const products = [
 ];
 
 const stats = [
-  { end: 4, suffix: "+", label: "Product Forms" },
+  { end: 5, suffix: "+", label: "Product Forms" },
   { end: 100, suffix: "%", label: "Organic & Natural" },
   { end: 6, suffix: "+", label: "Countries Shipped" },
 ];
@@ -124,7 +132,7 @@ export default function ProductsPage() {
             <Reveal delay={140}><p className="mt-3 text-gray-500 max-w-2xl mx-auto">Every product is sourced from verified farms, lab tested and packed to meet international standards.</p></Reveal>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-7">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-7">
             {products.map((p, i) => (
               <Reveal key={p.title} delay={(i % 4) * 90}>
                 <div className="group h-full flex flex-col bg-white rounded-2xl overflow-hidden border border-[#E6E8E0] shadow-sm transition duration-300 hover:-translate-y-1.5 hover:shadow-2xl">

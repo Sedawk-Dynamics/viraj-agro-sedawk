@@ -54,6 +54,7 @@ const products: Product[] = [
   { title: "Moringa Leaf Powder", desc: "Fine powder, rich green color, 100% pure.", img: "/images/moringa-powder.png", href: "/products/moringa-powder" },
   { title: "Moringa Dried Leaves", desc: "Carefully dried moringa leaves, high quality.", img: "/images/Moringa%20Dried%20Leaves.jpg", href: "/products/moringa-dried-leaves" },
   { title: "Moringa Tea Cut", desc: "Premium tea cut for infusions and blends.", img: "/images/Moringa%20Tea%20Cut.jpg", href: "/products/moringa-tea-cut" },
+  { title: "Moringa Capsules", desc: "Convenient, nutrient-dense capsules for daily wellness.", img: "/images/moringa-capsule.png", href: "/products/moringa-capsule" },
   { title: "Custom Packaging", desc: "Bulk orders with private label & custom packaging.", img: "/images/packaging.jpg", href: "/contact" },
 ];
 
@@ -166,7 +167,7 @@ export default function HomePage() {
             <h2 className="text-[2.3rem] font-bold text-brand-deep">Our Moringa Products</h2>
             <div className="w-[60px] h-[3px] rounded-full mx-auto mt-3 bg-brand-light" />
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[28px]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-[28px]">
             {products.map((p) => (
               <Link
                 key={p.title}

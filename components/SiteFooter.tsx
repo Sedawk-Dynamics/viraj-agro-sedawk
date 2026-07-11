@@ -1,11 +1,11 @@
 import Link from "next/link";
-import { Phone, Mail, MapPin, Instagram, Linkedin, Facebook, X } from "./Icons";
+import { Phone, Mail, MapPin, Instagram, Linkedin, Facebook, WhatsApp } from "./Icons";
 
 const quickLinks = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
   { label: "Products", href: "/products" },
-  { label: "Process", href: "/#process" },
+  { label: "Process", href: "/process" },
   { label: "For Bulk Buyers", href: "/#bulk" },
   { label: "Contact Us", href: "/contact" },
 ];
@@ -24,20 +24,21 @@ export default function SiteFooter() {
           </p>
           <div className="flex gap-3 mt-5">
             {[
-              { Icon: Instagram, href: "https://www.instagram.com/virajagronaturals/", label: "Instagram" },
-              { Icon: X, href: "https://x.com/virajnaturals", label: "Twitter / X" },
-              { Icon: Facebook, href: "https://www.facebook.com/virajnaturals/", label: "Facebook" },
-              { Icon: Linkedin, href: "https://www.linkedin.com/company/viraj-agro-naturals-private-limited", label: "LinkedIn" },
-            ].map(({ Icon, href, label }) => (
+              { Icon: Facebook, href: "https://www.facebook.com/virajnaturals/", label: "Facebook", color: "#1877F2" },
+              { Icon: Instagram, href: "https://www.instagram.com/virajagronaturals/", label: "Instagram", color: "#E4405F" },
+              { Icon: Linkedin, href: "https://www.linkedin.com/company/viraj-agro-naturals-private-limited", label: "LinkedIn", color: "#0A66C2" },
+              { Icon: WhatsApp, href: "https://wa.me/918737958006", label: "WhatsApp", color: "#25D366" },
+            ].map(({ Icon, href, label, color }) => (
               <a
                 key={label}
                 href={href}
                 aria-label={label}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full border border-white/30 flex items-center justify-center hover:bg-white/15 transition"
+                className="w-9 h-9 rounded-full bg-white flex items-center justify-center transition-transform hover:scale-110 hover:shadow"
+                style={{ color }}
               >
-                <Icon size={16} />
+                <Icon size={18} />
               </a>
             ))}
           </div>

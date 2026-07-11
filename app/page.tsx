@@ -46,6 +46,8 @@ const whyCards: { Icon: (p: IconProps) => JSX.Element; title: string; desc: stri
   { Icon: ShieldCheck, title: "Sustainably Sourced", desc: "Carefully sourced from the best moringa farms in India." },
   { Icon: CheckCircle, title: "Export Quality", desc: "Hygienically processed and packed to meet international standards." },
   { Icon: Package, title: "Bulk Supply Available", desc: "Consistent quality with custom packaging for bulk orders." },
+  { Icon: FileCheck, title: "Proper Certification & Documentation", desc: "Complete export documentation with APEDA, FSSAI and IEC compliance." },
+  { Icon: FlaskConical, title: "Lab Tested", desc: "Accredited laboratory testing for purity, safety and quality assurance." },
 ];
 
 type Product = { title: string; desc: string; img: string; href: string };
@@ -139,83 +141,6 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* ============ WHY MORINGA ============ */}
-      <section className="bg-white py-[70px]">
-        <div className="mx-auto max-w-[1200px] px-5">
-          <SectionHeading title="Why Us?" />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-[22px]">
-            {whyCards.map(({ Icon, title, desc }) => (
-              <div
-                key={title}
-                className="bg-brand-cream border border-brand-deep/[0.06] rounded-[14px] p-[30px_20px] text-center transition hover:-translate-y-1 hover:shadow-md"
-              >
-                <div className="text-brand-deep flex justify-center mb-[18px]">
-                  <Icon size={48} />
-                </div>
-                <h3 className="text-lg font-semibold text-brand-deep mb-[10px] leading-tight">{title}</h3>
-                <p className="text-sm text-gray-500">{desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ============ OUR MORINGA PRODUCTS ============ */}
-      <section id="products" className="bg-white pt-10 pb-[70px]">
-        <div className="mx-auto max-w-[1200px] px-5">
-          <div className="text-center mb-10">
-            <h2 className="text-[2.3rem] font-bold text-brand-deep">Our Moringa Products</h2>
-            <div className="w-[60px] h-[3px] rounded-full mx-auto mt-3 bg-brand-light" />
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-[28px]">
-            {products.map((p) => (
-              <Link
-                key={p.title}
-                href={p.href}
-                className="group block bg-white border border-[#E6E8E0] rounded-[18px] overflow-hidden shadow-sm transition hover:-translate-y-[6px] hover:shadow-2xl"
-              >
-                <div className="aspect-square overflow-hidden">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={p.img}
-                    alt={p.title}
-                    className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-6 text-center">
-                  <h3 className="text-xl font-semibold text-brand-deep mb-2">{p.title}</h3>
-                  <p className="text-sm text-gray-500 leading-relaxed">{p.desc}</p>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-{/* ============ QUALITY ASSURANCE ============ */}
-      <section id="quality" className="py-16 text-white bg-gradient-to-br from-brand-band to-[#0f3d20]">
-        <div className="mx-auto max-w-[1200px] px-5 grid grid-cols-1 lg:grid-cols-[0.9fr_1.4fr] gap-12 items-center">
-          <div>
-            <h2 className="text-white text-[2.1rem] font-bold inline-block">Quality Assurance</h2>
-            <div className="w-[60px] h-[3px] bg-white rounded-full mt-3 mb-5" />
-            <p className="text-white/85 max-w-[24rem]">
-              We follow strict quality control at every stage to deliver safe, pure and export-quality moringa
-              products to our global clients.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-[18px]">
-            {qaItems.map(({ Icon, label }) => (
-              <div key={label} className="text-center">
-                <div className="w-16 h-16 rounded-full border-[1.5px] border-white/35 flex items-center justify-center mx-auto mb-3 text-white">
-                  <Icon size={30} />
-                </div>
-                <span className="block text-sm font-medium text-white leading-snug">{label}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ============ ABOUT + FOR BULK BUYERS ============ */}
       <section id="about" className="bg-white py-[70px]">
         <div className="mx-auto max-w-[1200px] px-5 grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr_1fr] gap-10 items-stretch">
@@ -271,6 +196,83 @@ export default function HomePage() {
               ))}
             </ul>
             <p className="text-sm text-gray-500 mt-[14px]">Serious bulk inquiries only.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* ============ WHY MORINGA ============ */}
+      <section className="bg-white py-[70px]">
+        <div className="mx-auto max-w-[1360px] px-5">
+          <SectionHeading title="Why Us?" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-[18px]">
+            {whyCards.map(({ Icon, title, desc }) => (
+              <div
+                key={title}
+                className="bg-brand-cream border border-brand-deep/[0.06] rounded-[14px] p-[44px_18px] text-center transition hover:-translate-y-1 hover:shadow-md flex flex-col"
+              >
+                <div className="text-brand-deep flex justify-center mb-[22px]">
+                  <Icon size={52} />
+                </div>
+                <h3 className="text-base font-semibold text-brand-deep mb-[12px] leading-tight min-h-[4.5rem] flex items-center justify-center">{title}</h3>
+                <p className="text-sm text-gray-500">{desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============ QUALITY ASSURANCE ============ */}
+      <section id="quality" className="py-16 text-white bg-gradient-to-br from-brand-band to-[#0f3d20]">
+        <div className="mx-auto max-w-[1200px] px-5 grid grid-cols-1 lg:grid-cols-[0.9fr_1.4fr] gap-12 items-center">
+          <div>
+            <h2 className="text-white text-[2.1rem] font-bold inline-block">Quality Assurance</h2>
+            <div className="w-[60px] h-[3px] bg-white rounded-full mt-3 mb-5" />
+            <p className="text-white/85 max-w-[24rem]">
+              We follow strict quality control at every stage to deliver safe, pure and export-quality moringa
+              products to our global clients.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-[18px]">
+            {qaItems.map(({ Icon, label }) => (
+              <div key={label} className="text-center">
+                <div className="w-16 h-16 rounded-full border-[1.5px] border-white/35 flex items-center justify-center mx-auto mb-3 text-white">
+                  <Icon size={30} />
+                </div>
+                <span className="block text-sm font-medium text-white leading-snug">{label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============ OUR MORINGA PRODUCTS ============ */}
+      <section id="products" className="bg-white pt-10 pb-[70px]">
+        <div className="mx-auto max-w-[1200px] px-5">
+          <div className="text-center mb-10">
+            <h2 className="text-[2.3rem] font-bold text-brand-deep">Our Moringa Products</h2>
+            <div className="w-[60px] h-[3px] rounded-full mx-auto mt-3 bg-brand-light" />
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-[28px]">
+            {products.map((p) => (
+              <Link
+                key={p.title}
+                href={p.href}
+                className="group block bg-white border border-[#E6E8E0] rounded-[18px] overflow-hidden shadow-sm transition hover:-translate-y-[6px] hover:shadow-2xl"
+              >
+                <div className="aspect-square overflow-hidden">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={p.img}
+                    alt={p.title}
+                    className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-6 text-center">
+                  <h3 className="text-xl font-semibold text-brand-deep mb-2">{p.title}</h3>
+                  <p className="text-sm text-gray-500 leading-relaxed">{p.desc}</p>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

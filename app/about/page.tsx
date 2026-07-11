@@ -3,7 +3,7 @@ import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
 import CountUp from "@/components/CountUp";
-import { CheckCircle, Target, Eye, Heart, Mail, Phone, ArrowRight } from "@/components/Icons";
+import { CheckCircle, Target, Eye, Heart, Mail, Phone, ArrowRight, Globe, type IconProps } from "@/components/Icons";
 
 export const metadata: Metadata = {
   title: "About Us | Viraj Agro Naturals — Premium Indian Moringa Exporter",
@@ -11,11 +11,14 @@ export const metadata: Metadata = {
     "Viraj Agro Naturals is an India-based exporter of premium moringa products, connecting verified farms with global buyers through quality, transparency and complete traceability.",
 };
 
-const stats = [
+type Stat =
+  | { end: number; suffix: string; label: string }
+  | { Icon: (p: IconProps) => JSX.Element; label: string };
+
+const stats: Stat[] = [
   { end: 100, suffix: "%", label: "Quality Assured" },
-  { end: 6, suffix: "+", label: "Countries Shipped" },
+  { Icon: Globe, label: "Countries Shipped" },
   { end: 100, suffix: "%", label: "Batch Traceable" },
-  { end: 3, suffix: "", label: "Certifications" },
 ];
 
 const mvv = [
@@ -65,11 +68,11 @@ export default function AboutPage() {
 
       {/* Stats band */}
       <section className="bg-brand-deep text-white">
-        <div className="mx-auto max-w-[1200px] px-5 py-12 grid grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="mx-auto max-w-[1200px] px-5 py-12 grid grid-cols-2 lg:grid-cols-3 gap-8">
           {stats.map((s, i) => (
             <Reveal key={s.label} delay={i * 90} className="text-center">
-              <div className="text-4xl lg:text-5xl font-extrabold text-brand-cream">
-                <CountUp end={s.end} suffix={s.suffix} />
+              <div className="text-4xl lg:text-5xl font-extrabold text-brand-cream flex items-center justify-center">
+                {"Icon" in s ? <s.Icon size={52} /> : <CountUp end={s.end} suffix={s.suffix} />}
               </div>
               <div className="mt-2 text-sm text-white/75">{s.label}</div>
             </Reveal>
@@ -94,9 +97,9 @@ export default function AboutPage() {
           <div>
             <Reveal><span className="inline-block px-4 py-1.5 rounded-full bg-brand-accent/10 text-brand-deep text-sm font-medium">Our Story</span></Reveal>
             <Reveal delay={80}><h2 className="mt-4 text-4xl md:text-5xl font-bold text-brand-deep leading-tight">Building Trust Through Quality and Transparency</h2></Reveal>
-            <Reveal delay={140}><p className="mt-5 text-gray-500 text-lg leading-relaxed">Viraj Agro Naturals Private Limited is an India-based export trading company founded with a clear mission: to supply premium moringa products to global markets while maintaining the highest standards of quality and transparency.</p></Reveal>
-            <Reveal delay={200}><p className="mt-4 text-gray-500 text-lg leading-relaxed">Based in Kanpur, Uttar Pradesh, we have strategically positioned ourselves at the heart of India's agricultural belt. This allows us to work directly with verified farms across the country, ensuring authentic sourcing and sustainable practices.</p></Reveal>
-            <Reveal delay={260}><p className="mt-4 text-gray-500 text-lg leading-relaxed">Every shipment we dispatch is backed by complete documentation, accredited lab testing, and full batch traceability from farm to destination.</p></Reveal>
+            <Reveal delay={140}><p className="mt-5 text-gray-500 text-lg leading-relaxed">Viraj Agro Naturals Private Limited is an India-based export trading company specializing in premium moringa products for international markets. We are committed to delivering consistent quality through transparent sourcing, rigorous quality control, and reliable export practices.</p></Reveal>
+            <Reveal delay={200}><p className="mt-4 text-gray-500 text-lg leading-relaxed">Headquartered in Kanpur, Uttar Pradesh, we work with carefully verified farms and processing partners to source high-quality moringa products that meet international buyer requirements. Our focus is on building long-term partnerships through consistency, reliability, and professional service.</p></Reveal>
+            <Reveal delay={260}><p className="mt-4 text-gray-500 text-lg leading-relaxed">Every shipment is supported by complete export documentation, accredited laboratory testing, and full batch traceability from farm to destination, ensuring confidence, compliance, and transparency at every stage of the supply chain.</p></Reveal>
             <Reveal delay={320}>
               <div className="mt-7 grid grid-cols-2 gap-5">
                 <div className="p-4 rounded-xl bg-brand-cream">

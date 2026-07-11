@@ -25,20 +25,20 @@ export default function Navbar() {
   return (
     <>
       {/* Utility bar */}
-      <div className="bg-brand-band text-[#e6f0e8] text-[0.82rem]">
-        <div className="mx-auto max-w-[1200px] px-5 py-2 flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
-          <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
+      <div className="bg-brand-band text-[#e6f0e8] text-[0.92rem]">
+        <div className="mx-auto max-w-[1200px] px-5 py-2.5 flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-1">
             <a href="tel:+918737958006" className="inline-flex items-center gap-2 hover:text-white">
-              <Phone size={14} /> +91 8737958006
+              <Phone size={16} /> +91 8737958006
             </a>
             <a href="mailto:official@virajagronaturals.com" className="inline-flex items-center gap-2 hover:text-white">
-              <Mail size={14} /> official@virajagronaturals.com
+              <Mail size={16} /> official@virajagronaturals.com
             </a>
           </div>
 
           <div className="flex items-center gap-3">
             <span>APEDA | FSSAI | IEC Certified</span>
-            <div className="flex items-center gap-1.5 pl-3 border-l border-white/25">
+            <div className="flex items-center gap-2 pl-3 border-l border-white/25">
               {socials.map((s) => (
                 <a
                   key={s.label}
@@ -46,10 +46,10 @@ export default function Navbar() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={s.label}
-                  className="w-7 h-7 rounded-full bg-white flex items-center justify-center transition-transform hover:scale-110 hover:shadow"
+                  className="w-8 h-8 rounded-full bg-white flex items-center justify-center transition-transform hover:scale-110 hover:shadow"
                   style={{ color: s.color }}
                 >
-                  <s.Icon size={14} />
+                  <s.Icon size={16} />
                 </a>
               ))}
             </div>

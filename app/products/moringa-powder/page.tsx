@@ -69,15 +69,6 @@ const customPack = [
   { title: "OEM Bulk Supply", desc: "Unbranded bulk supply for in-house packing and private processing." },
 ];
 
-const exportFeatures = [
-  { Icon: Shield, title: "APEDA Registered", desc: "Officially registered exporter under APEDA for agricultural commodities." },
-  { Icon: FileCheck, title: "FSSAI Compliant", desc: "All products meet FSSAI standards ensuring food safety compliance." },
-  { Icon: FileText, title: "Phytosanitary Certificate", desc: "Phytosanitary certificates issued with all international shipments." },
-  { Icon: FlaskConical, title: "Certificate of Analysis", desc: "NABL lab-issued COA provided with every batch for full transparency." },
-  { Icon: Globe, title: "IEC Certified", desc: "Import Export Code registered for seamless international trade clearance." },
-  { Icon: Truck, title: "Worldwide Delivery", desc: "Reliable freight solutions to Europe, USA, Asia, Middle East and beyond." },
-];
-
 export default function MoringaPowderPage() {
   return (
     <>
@@ -236,30 +227,6 @@ export default function MoringaPowderPage() {
                   </div>
                   <h3 className="font-semibold text-brand-deep mb-2">{item.title}</h3>
                   <p className="text-base text-gray-500 leading-relaxed">{item.desc}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Export Friendly */}
-      <section className="bg-white py-[70px]">
-        <div className="mx-auto max-w-[1200px] px-5">
-          <div className="text-center mb-12">
-            <Reveal><span className="inline-block px-4 py-1.5 rounded-full bg-brand-accent/10 text-brand-deep text-sm font-medium">Export Friendly</span></Reveal>
-            <Reveal delay={80}><h2 className="mt-4 text-4xl md:text-5xl font-bold text-brand-deep">Built for Global Trade</h2></Reveal>
-            <Reveal delay={140}><p className="mt-3 text-gray-500 max-w-2xl mx-auto">Every shipment comes with complete export documentation, certifications and compliance support — making import clearance seamless for buyers worldwide.</p></Reveal>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {exportFeatures.map(({ Icon, title, desc }, i) => (
-              <Reveal key={title} delay={(i % 3) * 100}>
-                <div className="h-full bg-brand-cream rounded-2xl p-6 transition hover:-translate-y-1 hover:shadow-xl">
-                  <div className="w-12 h-12 rounded-xl bg-brand-deep text-white flex items-center justify-center mb-4">
-                    <Icon size={22} />
-                  </div>
-                  <h3 className="font-semibold text-brand-deep mb-2">{title}</h3>
-                  <p className="text-base text-gray-500 leading-relaxed">{desc}</p>
                 </div>
               </Reveal>
             ))}

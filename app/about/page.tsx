@@ -21,6 +21,14 @@ const stats: Stat[] = [
   { end: 100, suffix: "%", label: "Batch Traceable" },
 ];
 
+const certs: { alt: string; label: string; src?: string }[] = [
+  { alt: "APEDA", label: "Registered Exporter", src: "/images/apeda.jpg" },
+  { alt: "FSSAI", label: "Fully Compliant", src: "/images/fssai.jpg" },
+  { alt: "IEC", label: "Import-Export Code", src: "/images/iec.png" },
+  { alt: "USFDA", label: "Registered Facility", src: "/images/usfda.jpg" },
+  { alt: "Halal", label: "If Required", src: "/images/halal.webp" },
+];
+
 const mvv = [
   {
     Icon: Target,
@@ -101,15 +109,23 @@ export default function AboutPage() {
             <Reveal delay={200}><p className="mt-4 text-gray-500 text-lg leading-relaxed">Headquartered in Kanpur, Uttar Pradesh, we work with carefully verified farms and processing partners to source high-quality moringa products that meet international buyer requirements. Our focus is on building long-term partnerships through consistency, reliability, and professional service.</p></Reveal>
             <Reveal delay={260}><p className="mt-4 text-gray-500 text-lg leading-relaxed">Every shipment is supported by complete export documentation, accredited laboratory testing, and full batch traceability from farm to destination, ensuring confidence, compliance, and transparency at every stage of the supply chain.</p></Reveal>
             <Reveal delay={320}>
-              <div className="mt-7 grid grid-cols-2 gap-5">
-                <div className="p-4 rounded-xl bg-brand-cream">
-                  <p className="text-2xl font-extrabold text-brand-deep">APEDA</p>
-                  <p className="text-base text-gray-500">Registered Exporter</p>
-                </div>
-                <div className="p-4 rounded-xl bg-brand-cream">
-                  <p className="text-2xl font-extrabold text-brand-deep">FSSAI</p>
-                  <p className="text-base text-gray-500">Fully Compliant</p>
-                </div>
+              <div className="mt-7 flex flex-wrap justify-center gap-4">
+                {certs.map((c) => (
+                  <div
+                    key={c.alt}
+                    className="w-[calc(50%-8px)] sm:w-[calc(33.333%-11px)] p-5 rounded-2xl bg-white border border-brand-deep/10 shadow-[0_2px_10px_-4px_rgba(20,83,45,0.15)] flex flex-col items-center text-center gap-3 transition hover:shadow-md"
+                  >
+                    <div className="h-14 flex items-center justify-center">
+                      {c.src ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img src={c.src} alt={c.alt} className="max-h-14 max-w-full w-auto object-contain" />
+                      ) : (
+                        <span className="text-xl font-extrabold text-brand-deep tracking-wide">{c.alt.toUpperCase()}</span>
+                      )}
+                    </div>
+                    <p className="text-sm font-medium text-gray-500 leading-tight">{c.label}</p>
+                  </div>
+                ))}
               </div>
             </Reveal>
           </div>

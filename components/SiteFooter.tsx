@@ -63,6 +63,7 @@ export default function SiteFooter() {
             <li>APEDA Certified</li>
             <li>FSSAI Registered</li>
             <li>IEC Certified</li>
+            <li>USFDA Registered</li>
           </ul>
           <div className="flex gap-2.5 mt-4">
             {[

@@ -94,9 +94,9 @@ export default function ProductsPage() {
   return (
     <>
       <PageHero
-        eyebrow="Our Premium Moringa Collection"
-        title="Premium Moringa"
-        highlight="Product Range"
+        eyebrow="Our Products"
+        title="Our Premium Moringa"
+        highlight="Collection"
         subtitle="Carefully sourced, processed and packed for global buyers — explore our full range of export-ready moringa products."
       >
         <Link href="/contact" className="btn-white">Request a Quote <ArrowRight size={18} /></Link>

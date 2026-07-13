@@ -69,9 +69,9 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="About Viraj Agro Naturals"
-        title="Your Trusted Partner for"
-        highlight="Agricultural Excellence"
-        subtitle="Premium moringa export solutions for global markets. We bridge the gap between India's finest farms and buyers worldwide, delivering premium moringa products with complete transparency and unwavering quality commitment."
+        title="Premium Moringa Export Solutions for"
+        highlight="Global Markets"
+        subtitle="We bridge the gap between India's finest farms and global markets, delivering premium moringa products with complete transparency and unwavering quality commitment."
       />
 
       {/* Stats band */}

@@ -94,8 +94,17 @@ export default function SiteFooter() {
               official@virajagronaturals.com
             </a>
           </div>
-          <div className="flex items-center gap-2.5 text-[0.88rem] mb-[13px]">
-            <MapPin size={16} /> India
+          <div className="flex items-start gap-2.5 text-[0.88rem] mb-[13px]">
+            <MapPin size={16} className="mt-0.5 shrink-0" /> EWS 429 A Double Storey, Barra 2, Kanpur, Uttar Pradesh, India
+          </div>
+          <div className="mt-3 rounded-xl overflow-hidden border border-white/15">
+            <iframe
+              title="Viraj Agro Naturals location"
+              src="https://maps.google.com/maps?q=EWS%20429%20A%20Double%20Storey%2C%20Barra%202%2C%20Kanpur%2C%20Uttar%20Pradesh%2C%20India&output=embed"
+              className="w-full h-40 block"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
         </div>
       </div>

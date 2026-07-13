@@ -70,7 +70,7 @@ type Stat =
 const stats: Stat[] = [
   { end: 5, suffix: "+", label: "Product Forms" },
   { end: 100, suffix: "%", label: "Organic & Natural" },
-  { Icon: Globe, label: "Shipped Worldwide" },
+  { Icon: Globe, label: "Shipping Worldwide" },
   { end: 7, suffix: "+", label: "Verified Farms" },
 ];
 

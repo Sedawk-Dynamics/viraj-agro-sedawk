@@ -17,7 +17,7 @@ type Stat =
 
 const stats: Stat[] = [
   { end: 100, suffix: "%", label: "Quality Assured" },
-  { Icon: Globe, label: "Shipped Worldwide" },
+  { Icon: Globe, label: "Shipping Worldwide" },
   { end: 100, suffix: "%", label: "Batch Traceable" },
 ];
 

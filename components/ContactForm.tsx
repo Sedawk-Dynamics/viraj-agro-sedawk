@@ -93,6 +93,7 @@ export default function ContactForm() {
             <option value="moringa-powder">Moringa Leaf Powder</option>
             <option value="dried-leaves">Moringa Dried Leaves</option>
             <option value="tea-cut">Moringa Tea Cut</option>
+            <option value="capsule">Moringa Capsule</option>
             </select>
         </div>
 

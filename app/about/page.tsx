@@ -17,7 +17,7 @@ type Stat =
 
 const stats: Stat[] = [
   { end: 100, suffix: "%", label: "Quality Assured" },
-  { Icon: Globe, label: "Countries Shipped" },
+  { Icon: Globe, label: "Shipped Worldwide" },
   { end: 100, suffix: "%", label: "Batch Traceable" },
 ];
 
@@ -25,7 +25,7 @@ const certs: { alt: string; label: string; src?: string }[] = [
   { alt: "APEDA", label: "Registered Exporter", src: "/images/apeda.jpg" },
   { alt: "FSSAI", label: "Fully Compliant", src: "/images/fssai.jpg" },
   { alt: "IEC", label: "Import-Export Code", src: "/images/iec.png" },
-  { alt: "USFDA", label: "Registered Facility", src: "/images/usfda.jpg" },
+  { alt: "USFDA", label: "If Required", src: "/images/usfda.jpg" },
   { alt: "Halal", label: "If Required", src: "/images/halal.webp" },
 ];
 
@@ -71,7 +71,7 @@ export default function AboutPage() {
         eyebrow="About Viraj Agro Naturals"
         title="Your Trusted Partner for"
         highlight="Agricultural Excellence"
-        subtitle="We bridge the gap between India's finest farms and global markets, delivering premium moringa products with complete transparency and unwavering quality commitment."
+        subtitle="Premium moringa export solutions for global markets. We bridge the gap between India's finest farms and buyers worldwide, delivering premium moringa products with complete transparency and unwavering quality commitment."
       />
 
       {/* Stats band */}

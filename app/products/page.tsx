@@ -11,6 +11,7 @@ import {
   Globe,
   Phone,
   WhatsApp,
+  type IconProps,
 } from "@/components/Icons";
 
 export const metadata: Metadata = {
@@ -62,10 +63,14 @@ const products = [
   },
 ];
 
-const stats = [
+type Stat =
+  | { end: number; suffix: string; label: string }
+  | { Icon: (p: IconProps) => JSX.Element; label: string };
+
+const stats: Stat[] = [
   { end: 5, suffix: "+", label: "Product Forms" },
   { end: 100, suffix: "%", label: "Organic & Natural" },
-  { end: 6, suffix: "+", label: "Countries Shipped" },
+  { Icon: Globe, label: "Shipped Worldwide" },
   { end: 7, suffix: "+", label: "Verified Farms" },
 ];
 
@@ -89,7 +94,7 @@ export default function ProductsPage() {
   return (
     <>
       <PageHero
-        eyebrow="Our Products"
+        eyebrow="Our Premium Moringa Collection"
         title="Premium Moringa"
         highlight="Product Range"
         subtitle="Carefully sourced, processed and packed for global buyers — explore our full range of export-ready moringa products."
@@ -103,8 +108,8 @@ export default function ProductsPage() {
         <div className="mx-auto max-w-[1200px] px-5 py-10 flex flex-wrap justify-center gap-x-20 gap-y-8">
           {stats.map((s, i) => (
             <Reveal key={s.label} delay={i * 90} className="text-center">
-              <div className="text-4xl lg:text-5xl font-extrabold text-brand-cream">
-                <CountUp end={s.end} suffix={s.suffix} />
+              <div className="text-4xl lg:text-5xl font-extrabold text-brand-cream flex items-center justify-center">
+                {"Icon" in s ? <s.Icon size={52} /> : <CountUp end={s.end} suffix={s.suffix} />}
               </div>
               <div className="mt-1.5 text-sm text-white/75">{s.label}</div>
             </Reveal>

@@ -39,6 +39,7 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
             <span>APEDA | FSSAI | IEC Certified</span>
             <div className="flex items-center gap-2 pl-3 border-l border-white/25">
+              <span className="hidden sm:inline">Follow us on</span>
               {socials.map((s) => (
                 <a
                   key={s.label}

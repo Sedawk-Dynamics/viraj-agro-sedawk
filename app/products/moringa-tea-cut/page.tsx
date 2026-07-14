@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
+import JsonLd from "@/components/JsonLd";
 import {
   ArrowRight,
   CheckCircle,
@@ -21,6 +22,23 @@ export const metadata: Metadata = {
   title: "Moringa Tea Cut | Bulk Export | Viraj Agro Naturals",
   description:
     "Premium moringa tea-cut leaves for bulk export. Ideal for herbal teas, infusions and aromatic blends. Lab tested, export-grade, with custom packaging support.",
+  keywords: [
+    "moringa tea cut",
+    "moringa tea cut leaves",
+    "moringa herbal tea supplier",
+    "moringa infusion leaves",
+    "moringa tea bulk export",
+    "cut and sifted moringa",
+  ],
+  alternates: { canonical: "/products/moringa-tea-cut" },
+  openGraph: {
+    title: "Moringa Tea Cut | Bulk Export | Viraj Agro Naturals",
+    description:
+      "Premium moringa tea-cut leaves for bulk export. Ideal for herbal teas, infusions and aromatic blends. Lab tested and export-grade.",
+    url: "https://www.virajagronaturals.com/products/moringa-tea-cut",
+    type: "website",
+    images: [{ url: "/images/Moringa%20Tea%20Cut.jpg", alt: "Moringa Tea Cut" }],
+  },
 };
 
 const specs = [
@@ -70,8 +88,32 @@ const customPack = [
 ];
 
 export default function MoringaTeaCutPage() {
+  const productLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "Moringa Tea Cut",
+    image: "https://www.virajagronaturals.com/images/Moringa%20Tea%20Cut.jpg",
+    description:
+      "Premium moringa tea-cut leaves for bulk export. Ideal for herbal teas, infusions and aromatic blends. Lab tested, export-grade, with custom packaging support.",
+    category: "Moringa Products",
+    brand: { "@type": "Brand", name: "Viraj Agro Naturals" },
+    manufacturer: { "@id": "https://www.virajagronaturals.com/#organization" },
+    countryOfOrigin: "IN",
+    url: "https://www.virajagronaturals.com/products/moringa-tea-cut",
+  };
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.virajagronaturals.com/" },
+      { "@type": "ListItem", position: 2, name: "Products", item: "https://www.virajagronaturals.com/products" },
+      { "@type": "ListItem", position: 3, name: "Moringa Tea Cut", item: "https://www.virajagronaturals.com/products/moringa-tea-cut" },
+    ],
+  };
   return (
     <>
+      <JsonLd data={productLd} />
+      <JsonLd data={breadcrumbLd} />
       <PageHero
         eyebrow="Premium Export Product"
         title="Moringa Tea Cut"
@@ -251,7 +293,7 @@ export default function MoringaTeaCutPage() {
                 <div className="mt-8 flex flex-wrap gap-6 justify-center text-white/80 text-sm">
                   <a href="tel:+918737958006" className="inline-flex items-center gap-2 hover:text-white"><Phone size={18} /> +91 8737958006</a>
                   <a href="https://wa.me/918737958006" className="inline-flex items-center gap-2 hover:text-white"><WhatsApp size={18} /> WhatsApp Us</a>
-                  <a href="mailto:enquiry@virajagronaturals.com" className="inline-flex items-center gap-2 hover:text-white"><Mail size={18} /> enquiry@virajagronaturals.com</a>
+                  <a href="mailto:enquiry@virajagronaturals.in" className="inline-flex items-center gap-2 hover:text-white"><Mail size={18} /> enquiry@virajagronaturals.in</a>
                 </div>
               </div>
             </div>

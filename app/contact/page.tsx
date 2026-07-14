@@ -8,6 +8,23 @@ export const metadata: Metadata = {
   title: "Contact Us | Request a Quote | Viraj Agro Naturals",
   description:
     "Contact Viraj Agro Naturals for bulk moringa export inquiries. Request quotes, samples and shipping arrangements via phone, email, or our enquiry form.",
+  keywords: [
+    "contact moringa exporter",
+    "moringa export quote",
+    "bulk moringa inquiry",
+    "moringa supplier contact India",
+    "request moringa samples",
+    "moringa price quote",
+  ],
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Contact Us | Request a Quote | Viraj Agro Naturals",
+    description:
+      "Contact us for bulk moringa export inquiries — request quotes, samples and shipping arrangements.",
+    url: "https://www.virajagronaturals.com/contact",
+    type: "website",
+    images: [{ url: "/images/moringa-hero.jpg", width: 1200, height: 630, alt: "Contact Viraj Agro Naturals — moringa exporter" }],
+  },
 };
 
 const info = [

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
+import JsonLd from "@/components/JsonLd";
 import {
   ArrowRight,
   CheckCircle,
@@ -21,6 +22,24 @@ export const metadata: Metadata = {
   title: "Moringa Powder | Premium Bulk Export | Viraj Agro Naturals",
   description:
     "Premium quality Moringa Oleifera leaf powder for bulk export. Rich in nutrients and antioxidants. Lab tested, APEDA certified, with complete traceability from farm to shipment.",
+  keywords: [
+    "moringa leaf powder",
+    "moringa oleifera powder",
+    "bulk moringa powder",
+    "moringa powder exporter India",
+    "organic moringa powder",
+    "moringa powder wholesale",
+    "80 mesh moringa powder",
+  ],
+  alternates: { canonical: "/products/moringa-powder" },
+  openGraph: {
+    title: "Moringa Powder | Premium Bulk Export | Viraj Agro Naturals",
+    description:
+      "Premium Moringa Oleifera leaf powder for bulk export. Lab tested, APEDA certified, with complete traceability from farm to shipment.",
+    url: "https://www.virajagronaturals.com/products/moringa-powder",
+    type: "website",
+    images: [{ url: "/images/moringa-powder.png", alt: "Moringa Leaf Powder" }],
+  },
 };
 
 const specs = [
@@ -70,8 +89,32 @@ const customPack = [
 ];
 
 export default function MoringaPowderPage() {
+  const productLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "Moringa Leaf Powder",
+    image: "https://www.virajagronaturals.com/images/moringa-powder.png",
+    description:
+      "Premium quality Moringa Oleifera leaf powder for bulk export. Rich in nutrients and antioxidants. Lab tested, APEDA certified, with complete traceability from farm to shipment.",
+    category: "Moringa Products",
+    brand: { "@type": "Brand", name: "Viraj Agro Naturals" },
+    manufacturer: { "@id": "https://www.virajagronaturals.com/#organization" },
+    countryOfOrigin: "IN",
+    url: "https://www.virajagronaturals.com/products/moringa-powder",
+  };
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.virajagronaturals.com/" },
+      { "@type": "ListItem", position: 2, name: "Products", item: "https://www.virajagronaturals.com/products" },
+      { "@type": "ListItem", position: 3, name: "Moringa Powder", item: "https://www.virajagronaturals.com/products/moringa-powder" },
+    ],
+  };
   return (
     <>
+      <JsonLd data={productLd} />
+      <JsonLd data={breadcrumbLd} />
       <PageHero
         eyebrow="Premium Export Product"
         title="Moringa Powder"
@@ -251,7 +294,7 @@ export default function MoringaPowderPage() {
                 <div className="mt-8 flex flex-wrap gap-6 justify-center text-white/80 text-sm">
                   <a href="tel:+918737958006" className="inline-flex items-center gap-2 hover:text-white"><Phone size={18} /> +91 8737958006</a>
                   <a href="https://wa.me/918737958006" className="inline-flex items-center gap-2 hover:text-white"><WhatsApp size={18} /> WhatsApp Us</a>
-                  <a href="mailto:enquiry@virajagronaturals.com" className="inline-flex items-center gap-2 hover:text-white"><Mail size={18} /> enquiry@virajagronaturals.com</a>
+                  <a href="mailto:enquiry@virajagronaturals.in" className="inline-flex items-center gap-2 hover:text-white"><Mail size={18} /> enquiry@virajagronaturals.in</a>
                 </div>
               </div>
             </div>

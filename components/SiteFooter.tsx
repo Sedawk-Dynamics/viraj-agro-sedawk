@@ -90,8 +90,8 @@ export default function SiteFooter() {
           </div>
           <div className="flex items-center gap-2.5 text-[0.88rem] mb-[13px]">
             <Mail size={16} />{" "}
-            <a href="mailto:official@virajagronaturals.com" className="hover:text-white">
-              official@virajagronaturals.com
+            <a href="mailto:enquiry@virajagronaturals.in" className="hover:text-white">
+              enquiry@virajagronaturals.in
             </a>
           </div>
           <div className="flex items-start gap-2.5 text-[0.88rem] mb-[13px]">

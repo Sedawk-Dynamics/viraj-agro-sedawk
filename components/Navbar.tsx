@@ -31,8 +31,8 @@ export default function Navbar() {
             <a href="tel:+918737958006" className="inline-flex items-center gap-2 hover:text-white">
               <Phone size={16} /> +91 8737958006
             </a>
-            <a href="mailto:official@virajagronaturals.com" className="inline-flex items-center gap-2 hover:text-white">
-              <Mail size={16} /> official@virajagronaturals.com
+            <a href="mailto:enquiry@virajagronaturals.in" className="inline-flex items-center gap-2 hover:text-white">
+              <Mail size={16} /> enquiry@virajagronaturals.in
             </a>
           </div>
 

@@ -8,6 +8,24 @@ export const metadata: Metadata = {
   title: "Our Process | Farm to Export | Viraj Agro Naturals",
   description:
     "From careful farm sourcing to export-ready packaging — discover the step-by-step process behind every Viraj Agro Naturals moringa product.",
+  keywords: [
+    "moringa processing",
+    "moringa manufacturing process",
+    "moringa quality control",
+    "moringa export process",
+    "shade dried moringa",
+    "NABL lab tested moringa",
+    "moringa farm to export",
+  ],
+  alternates: { canonical: "/process" },
+  openGraph: {
+    title: "Our Process | Farm to Export | Viraj Agro Naturals",
+    description:
+      "From farm sourcing to export-ready packaging — the step-by-step process behind every Viraj Agro Naturals moringa product.",
+    url: "https://www.virajagronaturals.com/process",
+    type: "website",
+    images: [{ url: "/images/quality-lab.jpg", width: 1200, height: 630, alt: "Viraj Agro Naturals moringa processing and quality testing" }],
+  },
 };
 
 const steps = [

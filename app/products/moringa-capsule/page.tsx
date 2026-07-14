@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
+import JsonLd from "@/components/JsonLd";
 import {
   ArrowRight,
   CheckCircle,
@@ -21,6 +22,23 @@ export const metadata: Metadata = {
   title: "Moringa Capsules | Premium Bulk Export | Viraj Agro Naturals",
   description:
     "Premium quality Moringa Oleifera leaf capsules for bulk export. Convenient, nutrient-dense supplement form. Lab tested, APEDA certified, with complete traceability from farm to shipment.",
+  keywords: [
+    "moringa capsules",
+    "moringa capsules bulk",
+    "moringa supplement exporter",
+    "moringa oleifera capsules",
+    "private label moringa capsules",
+    "moringa capsules wholesale India",
+  ],
+  alternates: { canonical: "/products/moringa-capsule" },
+  openGraph: {
+    title: "Moringa Capsules | Premium Bulk Export | Viraj Agro Naturals",
+    description:
+      "Premium Moringa Oleifera leaf capsules for bulk export. Convenient, nutrient-dense supplement form. Lab tested and APEDA certified.",
+    url: "https://www.virajagronaturals.com/products/moringa-capsule",
+    type: "website",
+    images: [{ url: "/images/moringa-capsule.png", alt: "Moringa Capsules" }],
+  },
 };
 
 const specs = [
@@ -70,8 +88,32 @@ const customPack = [
 ];
 
 export default function MoringaCapsulePage() {
+  const productLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "Moringa Capsules",
+    image: "https://www.virajagronaturals.com/images/moringa-capsule.png",
+    description:
+      "Premium quality Moringa Oleifera leaf capsules for bulk export. Convenient, nutrient-dense supplement form. Lab tested, APEDA certified, with complete traceability from farm to shipment.",
+    category: "Moringa Products",
+    brand: { "@type": "Brand", name: "Viraj Agro Naturals" },
+    manufacturer: { "@id": "https://www.virajagronaturals.com/#organization" },
+    countryOfOrigin: "IN",
+    url: "https://www.virajagronaturals.com/products/moringa-capsule",
+  };
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.virajagronaturals.com/" },
+      { "@type": "ListItem", position: 2, name: "Products", item: "https://www.virajagronaturals.com/products" },
+      { "@type": "ListItem", position: 3, name: "Moringa Capsules", item: "https://www.virajagronaturals.com/products/moringa-capsule" },
+    ],
+  };
   return (
     <>
+      <JsonLd data={productLd} />
+      <JsonLd data={breadcrumbLd} />
       <PageHero
         eyebrow="Premium Export Product"
         title="Moringa Capsules"
@@ -251,7 +293,7 @@ export default function MoringaCapsulePage() {
                 <div className="mt-8 flex flex-wrap gap-6 justify-center text-white/80 text-sm">
                   <a href="tel:+918737958006" className="inline-flex items-center gap-2 hover:text-white"><Phone size={18} /> +91 8737958006</a>
                   <a href="https://wa.me/918737958006" className="inline-flex items-center gap-2 hover:text-white"><WhatsApp size={18} /> WhatsApp Us</a>
-                  <a href="mailto:enquiry@virajagronaturals.com" className="inline-flex items-center gap-2 hover:text-white"><Mail size={18} /> enquiry@virajagronaturals.com</a>
+                  <a href="mailto:enquiry@virajagronaturals.in" className="inline-flex items-center gap-2 hover:text-white"><Mail size={18} /> enquiry@virajagronaturals.in</a>
                 </div>
               </div>
             </div>

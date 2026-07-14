@@ -18,6 +18,26 @@ export const metadata: Metadata = {
   title: "Our Products | Premium Moringa Range | Viraj Agro Naturals",
   description:
     "Explore our premium moringa product range — leaf powder, dried leaves, tea cut and custom bulk supply. Lab tested, export-grade, with private-label and custom packaging.",
+  keywords: [
+    "moringa products",
+    "moringa leaf powder",
+    "moringa dried leaves",
+    "moringa tea cut",
+    "moringa capsules",
+    "bulk moringa supplier",
+    "private label moringa",
+    "moringa custom packaging",
+    "export grade moringa",
+  ],
+  alternates: { canonical: "/products" },
+  openGraph: {
+    title: "Our Products | Premium Moringa Range | Viraj Agro Naturals",
+    description:
+      "Premium moringa range — leaf powder, dried leaves, tea cut and capsules. Lab tested, export-grade, with private-label and custom packaging.",
+    url: "https://www.virajagronaturals.com/products",
+    type: "website",
+    images: [{ url: "/images/moringa-powder.png", width: 1200, height: 630, alt: "Viraj Agro Naturals premium moringa product range" }],
+  },
 };
 
 const products = [

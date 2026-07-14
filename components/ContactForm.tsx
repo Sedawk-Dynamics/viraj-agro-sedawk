@@ -7,16 +7,34 @@ const field =
   "w-full px-4 py-3 rounded-xl border border-[#E6E8E0] bg-white outline-none transition focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/30";
 const label = "block text-sm font-medium text-[#27313B] mb-1.5";
 
+// Web3Forms access key — safe to expose in client code (it only routes mail to your inbox).
+const WEB3FORMS_KEY = "d0ba19b9-5cc8-477d-b981-d1fc367761bf";
+
 export default function ContactForm() {
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setError("");
     setSubmitting(true);
-    await new Promise((r) => setTimeout(r, 1500));
-    setSubmitting(false);
-    setSubmitted(true);
+    try {
+      const formData = new FormData(e.currentTarget);
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || !data.success) {
+        throw new Error(data?.message || "Something went wrong. Please try again.");
+      }
+      setSubmitted(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Could not send. Please try again, or email us directly.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   if (submitted) {
@@ -40,6 +58,21 @@ export default function ContactForm() {
       <p className="text-gray-500 mt-1 mb-6">Fill out the form below and our export team will get back to you promptly.</p>
 
       <form onSubmit={onSubmit} className="space-y-5">
+        {/* Web3Forms reserved fields */}
+        <input type="hidden" name="access_key" value={WEB3FORMS_KEY} />
+        <input type="hidden" name="subject" value="New Enquiry from virajagronaturals.com" />
+        <input type="hidden" name="from_name" value="Viraj Agro Naturals Website" />
+        {/* Honeypot — hidden from humans; bots that tick it get filtered out */}
+        <input
+          type="checkbox"
+          name="botcheck"
+          className="hidden"
+          style={{ display: "none" }}
+          tabIndex={-1}
+          autoComplete="off"
+          aria-hidden="true"
+        />
+
         <div className="grid md:grid-cols-2 gap-5">
           <div>
             <label className={label} htmlFor="name">Full Name *</label>
@@ -126,6 +159,12 @@ export default function ContactForm() {
           )}
           {submitting ? "Sending..." : "Send Enquiry"}
         </button>
+
+        {error && (
+          <p role="alert" aria-live="polite" className="text-sm text-red-600 text-center">
+            {error}
+          </p>
+        )}
       </form>
     </div>
   );

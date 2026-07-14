@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
+import JsonLd from "@/components/JsonLd";
 import {
   ArrowRight,
   CheckCircle,
@@ -21,6 +22,23 @@ export const metadata: Metadata = {
   title: "Moringa Dried Leaves | Bulk Export | Viraj Agro Naturals",
   description:
     "Premium whole moringa dried leaves for bulk export. Shade dried to retain natural color and nutrition. Lab tested, export-grade, with complete documentation support.",
+  keywords: [
+    "moringa dried leaves",
+    "dried moringa leaves bulk",
+    "whole moringa leaves exporter",
+    "shade dried moringa leaves",
+    "moringa dry leaves wholesale",
+    "moringa leaves export India",
+  ],
+  alternates: { canonical: "/products/moringa-dried-leaves" },
+  openGraph: {
+    title: "Moringa Dried Leaves | Bulk Export | Viraj Agro Naturals",
+    description:
+      "Premium whole moringa dried leaves for bulk export. Shade dried to retain natural color and nutrition. Lab tested and export-grade.",
+    url: "https://www.virajagronaturals.com/products/moringa-dried-leaves",
+    type: "website",
+    images: [{ url: "/images/Moringa%20Dried%20Leaves.jpg", alt: "Moringa Dried Leaves" }],
+  },
 };
 
 const specs = [
@@ -70,8 +88,32 @@ const customPack = [
 ];
 
 export default function MoringaDriedLeavesPage() {
+  const productLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "Moringa Dried Leaves",
+    image: "https://www.virajagronaturals.com/images/Moringa%20Dried%20Leaves.jpg",
+    description:
+      "Premium whole moringa dried leaves for bulk export. Shade dried to retain natural color and nutrition. Lab tested, export-grade, with complete documentation support.",
+    category: "Moringa Products",
+    brand: { "@type": "Brand", name: "Viraj Agro Naturals" },
+    manufacturer: { "@id": "https://www.virajagronaturals.com/#organization" },
+    countryOfOrigin: "IN",
+    url: "https://www.virajagronaturals.com/products/moringa-dried-leaves",
+  };
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.virajagronaturals.com/" },
+      { "@type": "ListItem", position: 2, name: "Products", item: "https://www.virajagronaturals.com/products" },
+      { "@type": "ListItem", position: 3, name: "Moringa Dried Leaves", item: "https://www.virajagronaturals.com/products/moringa-dried-leaves" },
+    ],
+  };
   return (
     <>
+      <JsonLd data={productLd} />
+      <JsonLd data={breadcrumbLd} />
       <PageHero
         eyebrow="Premium Export Product"
         title="Moringa Dried Leaves"
@@ -251,7 +293,7 @@ export default function MoringaDriedLeavesPage() {
                 <div className="mt-8 flex flex-wrap gap-6 justify-center text-white/80 text-sm">
                   <a href="tel:+918737958006" className="inline-flex items-center gap-2 hover:text-white"><Phone size={18} /> +91 8737958006</a>
                   <a href="https://wa.me/918737958006" className="inline-flex items-center gap-2 hover:text-white"><WhatsApp size={18} /> WhatsApp Us</a>
-                  <a href="mailto:enquiry@virajagronaturals.com" className="inline-flex items-center gap-2 hover:text-white"><Mail size={18} /> enquiry@virajagronaturals.com</a>
+                  <a href="mailto:enquiry@virajagronaturals.in" className="inline-flex items-center gap-2 hover:text-white"><Mail size={18} /> enquiry@virajagronaturals.in</a>
                 </div>
               </div>
             </div>

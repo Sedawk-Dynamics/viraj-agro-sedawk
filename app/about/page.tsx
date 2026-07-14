@@ -9,6 +9,23 @@ export const metadata: Metadata = {
   title: "About Us | Viraj Agro Naturals — Premium Indian Moringa Exporter",
   description:
     "Viraj Agro Naturals is an India-based exporter of premium moringa products, connecting verified farms with global buyers through quality, transparency and complete traceability.",
+  keywords: [
+    "about Viraj Agro Naturals",
+    "moringa export company India",
+    "moringa exporter Kanpur",
+    "premium moringa supplier",
+    "moringa trading company",
+    "verified moringa farms India",
+  ],
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About Us | Viraj Agro Naturals",
+    description:
+      "India-based exporter of premium moringa products, connecting verified farms with global buyers through quality, transparency and traceability.",
+    url: "https://www.virajagronaturals.com/about",
+    type: "website",
+    images: [{ url: "/images/hero-farm.png", width: 1200, height: 630, alt: "Viraj Agro Naturals moringa farms in India" }],
+  },
 };
 
 type Stat =
@@ -60,8 +77,8 @@ const qExtra = [
 ];
 
 const team = [
-  { initial: "T", name: "Tarun", role: "Founder & CEO", desc: "Leading the vision of Viraj Agro Naturals with a passion for quality agriculture and global trade.", email: "tarun@virajagronaturals.com" },
-  { initial: "R", name: "Raj Kumari", role: "Co-Founder & Director", desc: "Overseeing operations and ensuring excellence in every aspect of our export business.", email: "director@virajagronaturals.com" },
+  { initial: "T", name: "Tarun", role: "Founder & CEO", desc: "Leading the vision of Viraj Agro Naturals with a passion for quality agriculture and global trade.", email: "tarun@virajagronaturals.in" },
+  { initial: "R", name: "Raj Kumari", role: "Co-Founder & Director", desc: "Overseeing operations and ensuring excellence in every aspect of our export business.", email: "director@virajagronaturals.in" },
 ];
 
 export default function AboutPage() {

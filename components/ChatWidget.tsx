@@ -69,17 +69,17 @@ function getBotReply(input: string): string {
 
   // Nutrition / protein / vitamins
   if (/(protein|vitamin|nutrition|nutrient|calori|iron|calcium|amino|antioxid|mineral)/i.test(q)) {
-    return "Moringa is one of the most nutrient-dense plants in the world! 🌿\n\nFor detailed nutritional data and our lab-tested Certificate of Analysis (COA), please contact us:\n\n📧 official@virajagronaturals.com\n📞 +91 8737958006\n\nWe'll send you the full nutritional report for any product.";
+    return "Moringa is one of the most nutrient-dense plants in the world! 🌿\n\nFor detailed nutritional data and our lab-tested Certificate of Analysis (COA), please contact us:\n\n📧 enquiry@virajagronaturals.in\n📞 +91 8737958006\n\nWe'll send you the full nutritional report for any product.";
   }
 
   // MOQ / Minimum order
   if (/(moq|minimum order|min order|quantity)/i.test(q)) {
-    return "Our MOQ (Minimum Order Quantity) is flexible and depends on the product and packaging type.\n\nFor exact MOQ details and pricing, please reach out:\n\n📞 +91 8737958006\n📧 official@virajagronaturals.com\n💬 WhatsApp us for a quick response!";
+    return "Our MOQ (Minimum Order Quantity) is flexible and depends on the product and packaging type.\n\nFor exact MOQ details and pricing, please reach out:\n\n📞 +91 8737958006\n📧 enquiry@virajagronaturals.in\n💬 WhatsApp us for a quick response!";
   }
 
   // Pricing / Cost / Price
   if (/(price|pricing|cost|rate|quote|quotation)/i.test(q)) {
-    return "Pricing depends on the product, quantity and packaging requirements.\n\n📋 For a custom quote:\n✅ Tell us the product\n✅ Your required quantity\n✅ Packaging preference\n\nContact us at:\n📞 +91 8737958006\n📧 official@virajagronaturals.com\n\nWe respond within 24 hours!";
+    return "Pricing depends on the product, quantity and packaging requirements.\n\n📋 For a custom quote:\n✅ Tell us the product\n✅ Your required quantity\n✅ Packaging preference\n\nContact us at:\n📞 +91 8737958006\n📧 enquiry@virajagronaturals.in\n\nWe respond within 24 hours!";
   }
 
   // Quality / Lab / Testing
@@ -89,12 +89,12 @@ function getBotReply(input: string): string {
 
   // Order / How to order / Buy
   if (/(order|buy|purchase|how to|get start|sourcing|enquir|inquir)/i.test(q)) {
-    return "Placing an order is easy! 🎉\n\n1️⃣ Tell us your product, quantity & packaging\n2️⃣ We send you pricing & sample availability\n3️⃣ Confirm the order & we begin processing\n4️⃣ Export documentation prepared\n5️⃣ Shipped to your destination\n\n📞 Call: +91 8737958006\n📧 Email: official@virajagronaturals.com\n💬 WhatsApp us for fastest response!";
+    return "Placing an order is easy! 🎉\n\n1️⃣ Tell us your product, quantity & packaging\n2️⃣ We send you pricing & sample availability\n3️⃣ Confirm the order & we begin processing\n4️⃣ Export documentation prepared\n5️⃣ Shipped to your destination\n\n📞 Call: +91 8737958006\n📧 Email: enquiry@virajagronaturals.in\n💬 WhatsApp us for fastest response!";
   }
 
   // Contact / Phone / Email / WhatsApp
   if (/(contact|phone|call|email|whatsapp|reach|touch)/i.test(q)) {
-    return "📬 Get in touch with us:\n\n📞 Phone: +91 8737958006\n📧 Email: official@virajagronaturals.com\n💬 WhatsApp: +91 8737958006\n📍 Based in Kanpur, Uttar Pradesh, India\n\nWe typically respond within a few hours!";
+    return "📬 Get in touch with us:\n\n📞 Phone: +91 8737958006\n📧 Email: enquiry@virajagronaturals.in\n💬 WhatsApp: +91 8737958006\n📍 Based in Kanpur, Uttar Pradesh, India\n\nWe typically respond within a few hours!";
   }
 
   // About company
@@ -109,11 +109,11 @@ function getBotReply(input: string): string {
 
   // Thanks
   if (/(thank|thanks|thank you|thx)/i.test(q)) {
-    return "You're welcome! 😊 Feel free to ask anything else about our moringa products or export services.\n\nFor direct enquiries:\n📞 +91 8737958006\n📧 official@virajagronaturals.com";
+    return "You're welcome! 😊 Feel free to ask anything else about our moringa products or export services.\n\nFor direct enquiries:\n📞 +91 8737958006\n📧 enquiry@virajagronaturals.in";
   }
 
   // Default fallback
-  return "I don't have a specific answer for that right now.\n\nPlease contact us and our team will get back to you shortly:\n\n📧 official@virajagronaturals.com\n📞 +91 8737958006\n\nWe typically respond within a few hours!";
+  return "I don't have a specific answer for that right now.\n\nPlease contact us and our team will get back to you shortly:\n\n📧 enquiry@virajagronaturals.in\n📞 +91 8737958006\n\nWe typically respond within a few hours!";
 }
 
 let nextId = 10;
